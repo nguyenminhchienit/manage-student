@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HSModelStoreContainer" CdmEntityContainer="HSEntities">
+    <EntitySetMapping Name="tb_ChiTietVP">
+      <EntityTypeMapping TypeName="HSModel.tb_ChiTietVP">
+        <MappingFragment StoreEntitySet="tb_ChiTietVP">
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="NGAYVP" ColumnName="NGAYVP" />
+          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+          <ScalarProperty Name="MALOI" ColumnName="MALOI" />
+          <ScalarProperty Name="MAVP" ColumnName="MAVP" />
+          <ScalarProperty Name="MAVPCT" ColumnName="MAVPCT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ChucVu">
+      <EntityTypeMapping TypeName="HSModel.tb_ChucVu">
+        <MappingFragment StoreEntitySet="tb_ChucVu">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="TENCV" ColumnName="TENCV" />
+          <ScalarProperty Name="MACV" ColumnName="MACV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DanhMucLoi">
+      <EntityTypeMapping TypeName="HSModel.tb_DanhMucLoi">
+        <MappingFragment StoreEntitySet="tb_DanhMucLoi">
+          <ScalarProperty Name="NGHIEMTRONG" ColumnName="NGHIEMTRONG" />
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+          <ScalarProperty Name="TENLOI" ColumnName="TENLOI" />
+          <ScalarProperty Name="MALOI" ColumnName="MALOI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DanToc">
+      <EntityTypeMapping TypeName="HSModel.tb_DanToc">
+        <MappingFragment StoreEntitySet="tb_DanToc">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="TENDT" ColumnName="TENDT" />
+          <ScalarProperty Name="MADT" ColumnName="MADT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_GiaoVien">
+      <EntityTypeMapping TypeName="HSModel.tb_GiaoVien">
+        <MappingFragment StoreEntitySet="tb_GiaoVien">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="MACV" ColumnName="MACV" />
+          <ScalarProperty Name="MATD" ColumnName="MATD" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="MAGV" ColumnName="MAGV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_GiaoVien_Lop">
+      <EntityTypeMapping TypeName="HSModel.tb_GiaoVien_Lop">
+        <MappingFragment StoreEntitySet="tb_GiaoVien_Lop">
+          <ScalarProperty Name="MAHK" ColumnName="MAHK" />
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="MAGV" ColumnName="MAGV" />
+          <ScalarProperty Name="MAGV_LOP" ColumnName="MAGV_LOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HocKy">
+      <EntityTypeMapping TypeName="HSModel.tb_HocKy">
+        <MappingFragment StoreEntitySet="tb_HocKy">
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="HESO" ColumnName="HESO" />
+          <ScalarProperty Name="TENHK" ColumnName="TENHK" />
+          <ScalarProperty Name="MAHK" ColumnName="MAHK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HocSinh">
+      <EntityTypeMapping TypeName="HSModel.tb_HocSinh">
+        <MappingFragment StoreEntitySet="tb_HocSinh">
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="ISPHANLOP" ColumnName="ISPHANLOP" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="MATG" ColumnName="MATG" />
+          <ScalarProperty Name="MADT" ColumnName="MADT" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HS_Lop_NamHoc">
+      <EntityTypeMapping TypeName="HSModel.tb_HS_Lop_NamHoc">
+        <MappingFragment StoreEntitySet="tb_HS_Lop_NamHoc">
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_KetQua">
+      <EntityTypeMapping TypeName="HSModel.tb_KetQua">
+        <MappingFragment StoreEntitySet="tb_KetQua">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="MAHK" ColumnName="MAHK" />
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="XEPLOAI" ColumnName="XEPLOAI" />
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+          <ScalarProperty Name="DIEMTHIL2" ColumnName="DIEMTHIL2" />
+          <ScalarProperty Name="DIEMTHIL1" ColumnName="DIEMTHIL1" />
+          <ScalarProperty Name="DIEMKIEMTRA" ColumnName="DIEMKIEMTRA" />
+          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+          <ScalarProperty Name="MAKQ" ColumnName="MAKQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_KhoiLop">
+      <EntityTypeMapping TypeName="HSModel.tb_KhoiLop">
+        <MappingFragment StoreEntitySet="tb_KhoiLop">
+          <ScalarProperty Name="TENKHOI" ColumnName="TENKHOI" />
+          <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Lop">
+      <EntityTypeMapping TypeName="HSModel.tb_Lop">
+        <MappingFragment StoreEntitySet="tb_Lop">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
+          <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_MonHoc">
+      <EntityTypeMapping TypeName="HSModel.tb_MonHoc">
+        <MappingFragment StoreEntitySet="tb_MonHoc">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="SOTIET" ColumnName="SOTIET" />
+          <ScalarProperty Name="HESO" ColumnName="HESO" />
+          <ScalarProperty Name="TENMH" ColumnName="TENMH" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_NamHoc">
+      <EntityTypeMapping TypeName="HSModel.tb_NamHoc">
+        <MappingFragment StoreEntitySet="tb_NamHoc">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="TENNH" ColumnName="TENNH" />
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_TonGiao">
+      <EntityTypeMapping TypeName="HSModel.tb_TonGiao">
+        <MappingFragment StoreEntitySet="tb_TonGiao">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="TENTG" ColumnName="TENTG" />
+          <ScalarProperty Name="MATG" ColumnName="MATG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_TrinhDo">
+      <EntityTypeMapping TypeName="HSModel.tb_TrinhDo">
+        <MappingFragment StoreEntitySet="tb_TrinhDo">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="TENTD" ColumnName="TENTD" />
+          <ScalarProperty Name="MATD" ColumnName="MATD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Truong">
+      <EntityTypeMapping TypeName="HSModel.tb_Truong">
+        <MappingFragment StoreEntitySet="tb_Truong">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="WEB" ColumnName="WEB" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TENTRUONG" ColumnName="TENTRUONG" />
+          <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_User">
+      <EntityTypeMapping TypeName="HSModel.tb_User">
+        <MappingFragment StoreEntitySet="tb_User">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ViPham">
+      <EntityTypeMapping TypeName="HSModel.tb_ViPham">
+        <MappingFragment StoreEntitySet="tb_ViPham">
+          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
+          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
+          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
+          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="MAHK" ColumnName="MAHK" />
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="TONGDIEMTRU" ColumnName="TONGDIEMTRU" />
+          <ScalarProperty Name="TONGSOLOI" ColumnName="TONGSOLOI" />
+          <ScalarProperty Name="NGAYVP" ColumnName="NGAYVP" />
+          <ScalarProperty Name="MAVP" ColumnName="MAVP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="THONGKE_VIPAHM_NAMHOC" FunctionName="HSModel.Store.THONGKE_VIPAHM_NAMHOC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HSModel.THONGKE_VIPAHM_NAMHOC_Result">
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="TENNH" ColumnName="TENNH" />
+          <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
+          <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
+          <ScalarProperty Name="TENKHOI" ColumnName="TENKHOI" />
+          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

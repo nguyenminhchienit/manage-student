@@ -1,0 +1,15 @@
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\DataAccessLayer.dll
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\EntityFramework.dll
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\EntityFramework.xml
+E:\HUTECH\Nam3\HK1\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\HUTECH\Nam3\HK1\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+E:\HUTECH\Nam3\HK1\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+E:\HUTECH\Nam3\HK1\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+E:\HUTECH\Nam3\HK1\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\HUTECH\Nam3\HK1\BusinessLayer\obj\Debug\BusinessLayer.pdb

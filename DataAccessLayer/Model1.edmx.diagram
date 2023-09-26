@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6171dfb4e7d7416e95d77a3a52befdaf" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="HSModel.tb_ChiTietVP" Width="1.5" PointX="8.25" PointY="7" />
+        <EntityTypeShape EntityType="HSModel.tb_ChucVu" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HSModel.tb_DanhMucLoi" Width="1.5" PointX="6" PointY="1.875" />
+        <EntityTypeShape EntityType="HSModel.tb_DanToc" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HSModel.tb_GiaoVien" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="HSModel.tb_GiaoVien_Lop" Width="1.5" PointX="3" PointY="2.125" />
+        <EntityTypeShape EntityType="HSModel.tb_HocKy" Width="1.5" PointX="0.75" PointY="17" />
+        <EntityTypeShape EntityType="HSModel.tb_HocSinh" Width="1.5" PointX="0.75" PointY="25.875" />
+        <EntityTypeShape EntityType="HSModel.tb_HS_Lop_NamHoc" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HSModel.tb_KetQua" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="HSModel.tb_KhoiLop" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="HSModel.tb_Lop" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HSModel.tb_MonHoc" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="HSModel.tb_NamHoc" Width="1.5" PointX="0.75" PointY="21.25" />
+        <EntityTypeShape EntityType="HSModel.tb_TonGiao" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HSModel.tb_TrinhDo" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HSModel.tb_Truong" Width="1.5" PointX="5.75" PointY="11.75" />
+        <EntityTypeShape EntityType="HSModel.tb_User" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HSModel.tb_ViPham" Width="1.5" PointX="6" PointY="6.25" />
+        <AssociationConnector Association="HSModel.FK1" />
+        <AssociationConnector Association="HSModel.FK2" />
+        <AssociationConnector Association="HSModel.FK3" />
+        <AssociationConnector Association="HSModel.FK4" />
+        <AssociationConnector Association="HSModel.FK5" />
+        <AssociationConnector Association="HSModel.FK6" />
+        <AssociationConnector Association="HSModel.FK7" />
+        <AssociationConnector Association="HSModel.FK12" />
+        <AssociationConnector Association="HSModel.FK16" />
+        <AssociationConnector Association="HSModel.FK10" />
+        <AssociationConnector Association="HSModel.FK11" />
+        <AssociationConnector Association="HSModel.FK13" />
+        <AssociationConnector Association="HSModel.FK9" />
+        <AssociationConnector Association="HSModel.FK17" />
+        <AssociationConnector Association="HSModel.FK15" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

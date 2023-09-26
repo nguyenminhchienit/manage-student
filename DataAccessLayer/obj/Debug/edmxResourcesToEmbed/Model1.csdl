@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_ChiTietVP" EntityType="HSModel.tb_ChiTietVP" />
+    <EntitySet Name="tb_ChucVu" EntityType="HSModel.tb_ChucVu" />
+    <EntitySet Name="tb_DanhMucLoi" EntityType="HSModel.tb_DanhMucLoi" />
+    <EntitySet Name="tb_DanToc" EntityType="HSModel.tb_DanToc" />
+    <EntitySet Name="tb_GiaoVien" EntityType="HSModel.tb_GiaoVien" />
+    <EntitySet Name="tb_GiaoVien_Lop" EntityType="HSModel.tb_GiaoVien_Lop" />
+    <EntitySet Name="tb_HocKy" EntityType="HSModel.tb_HocKy" />
+    <EntitySet Name="tb_HocSinh" EntityType="HSModel.tb_HocSinh" />
+    <EntitySet Name="tb_HS_Lop_NamHoc" EntityType="HSModel.tb_HS_Lop_NamHoc" />
+    <EntitySet Name="tb_KetQua" EntityType="HSModel.tb_KetQua" />
+    <EntitySet Name="tb_KhoiLop" EntityType="HSModel.tb_KhoiLop" />
+    <EntitySet Name="tb_Lop" EntityType="HSModel.tb_Lop" />
+    <EntitySet Name="tb_MonHoc" EntityType="HSModel.tb_MonHoc" />
+    <EntitySet Name="tb_NamHoc" EntityType="HSModel.tb_NamHoc" />
+    <EntitySet Name="tb_TonGiao" EntityType="HSModel.tb_TonGiao" />
+    <EntitySet Name="tb_TrinhDo" EntityType="HSModel.tb_TrinhDo" />
+    <EntitySet Name="tb_Truong" EntityType="HSModel.tb_Truong" />
+    <EntitySet Name="tb_User" EntityType="HSModel.tb_User" />
+    <EntitySet Name="tb_ViPham" EntityType="HSModel.tb_ViPham" />
+    <AssociationSet Name="FK1" Association="HSModel.FK1">
+      <End Role="tb_ViPham" EntitySet="tb_ViPham" />
+      <End Role="tb_ChiTietVP" EntitySet="tb_ChiTietVP" />
+    </AssociationSet>
+    <AssociationSet Name="FK2" Association="HSModel.FK2">
+      <End Role="tb_DanhMucLoi" EntitySet="tb_DanhMucLoi" />
+      <End Role="tb_ChiTietVP" EntitySet="tb_ChiTietVP" />
+    </AssociationSet>
+    <AssociationSet Name="FK3" Association="HSModel.FK3">
+      <End Role="tb_HocSinh" EntitySet="tb_HocSinh" />
+      <End Role="tb_ChiTietVP" EntitySet="tb_ChiTietVP" />
+    </AssociationSet>
+    <AssociationSet Name="FK4" Association="HSModel.FK4">
+      <End Role="tb_GiaoVien" EntitySet="tb_GiaoVien" />
+      <End Role="tb_GiaoVien_Lop" EntitySet="tb_GiaoVien_Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK5" Association="HSModel.FK5">
+      <End Role="tb_Lop" EntitySet="tb_Lop" />
+      <End Role="tb_GiaoVien_Lop" EntitySet="tb_GiaoVien_Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK6" Association="HSModel.FK6">
+      <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
+      <End Role="tb_GiaoVien_Lop" EntitySet="tb_GiaoVien_Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK7" Association="HSModel.FK7">
+      <End Role="tb_HocKy" EntitySet="tb_HocKy" />
+      <End Role="tb_GiaoVien_Lop" EntitySet="tb_GiaoVien_Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK12" Association="HSModel.FK12">
+      <End Role="tb_HocKy" EntitySet="tb_HocKy" />
+      <End Role="tb_KetQua" EntitySet="tb_KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK16" Association="HSModel.FK16">
+      <End Role="tb_HocKy" EntitySet="tb_HocKy" />
+      <End Role="tb_ViPham" EntitySet="tb_ViPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK10" Association="HSModel.FK10">
+      <End Role="tb_HocSinh" EntitySet="tb_HocSinh" />
+      <End Role="tb_KetQua" EntitySet="tb_KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK11" Association="HSModel.FK11">
+      <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
+      <End Role="tb_KetQua" EntitySet="tb_KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK13" Association="HSModel.FK13">
+      <End Role="tb_Lop" EntitySet="tb_Lop" />
+      <End Role="tb_KetQua" EntitySet="tb_KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK9" Association="HSModel.FK9">
+      <End Role="tb_MonHoc" EntitySet="tb_MonHoc" />
+      <End Role="tb_KetQua" EntitySet="tb_KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK17" Association="HSModel.FK17">
+      <End Role="tb_Lop" EntitySet="tb_Lop" />
+      <End Role="tb_ViPham" EntitySet="tb_ViPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK15" Association="HSModel.FK15">
+      <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
+      <End Role="tb_ViPham" EntitySet="tb_ViPham" />
+    </AssociationSet>
+    <FunctionImport Name="THONGKE_VIPAHM_NAMHOC" ReturnType="Collection(HSModel.THONGKE_VIPAHM_NAMHOC_Result)">
+      <Parameter Name="MANH" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="tb_ChiTietVP">
+    <Key>
+      <PropertyRef Name="MAVPCT" />
+    </Key>
+    <Property Name="MAVPCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAVP" Type="Int32" />
+    <Property Name="MALOI" Type="Int32" />
+    <Property Name="MAHS" Type="Int32" />
+    <Property Name="DIEM" Type="Int32" />
+    <Property Name="NGAYVP" Type="DateTime" Precision="3" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK1" FromRole="tb_ChiTietVP" ToRole="tb_ViPham" />
+    <NavigationProperty Name="tb_DanhMucLoi" Relationship="HSModel.FK2" FromRole="tb_ChiTietVP" ToRole="tb_DanhMucLoi" />
+    <NavigationProperty Name="tb_HocSinh" Relationship="HSModel.FK3" FromRole="tb_ChiTietVP" ToRole="tb_HocSinh" />
+  </EntityType>
+  <EntityType Name="tb_ChucVu">
+    <Key>
+      <PropertyRef Name="MACV" />
+    </Key>
+    <Property Name="MACV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_DanhMucLoi">
+    <Key>
+      <PropertyRef Name="MALOI" />
+    </Key>
+    <Property Name="MALOI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENLOI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DIEM" Type="Int32" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <Property Name="NGHIEMTRONG" Type="Boolean" />
+    <NavigationProperty Name="tb_ChiTietVP" Relationship="HSModel.FK2" FromRole="tb_DanhMucLoi" ToRole="tb_ChiTietVP" />
+  </EntityType>
+  <EntityType Name="tb_DanToc">
+    <Key>
+      <PropertyRef Name="MADT" />
+    </Key>
+    <Property Name="MADT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_GiaoVien">
+    <Key>
+      <PropertyRef Name="MAGV" />
+    </Key>
+    <Property Name="MAGV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIOITINH" Type="Int32" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DT" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MATD" Type="Int32" />
+    <Property Name="MACV" Type="Int32" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK4" FromRole="tb_GiaoVien" ToRole="tb_GiaoVien_Lop" />
+  </EntityType>
+  <EntityType Name="tb_GiaoVien_Lop">
+    <Key>
+      <PropertyRef Name="MAGV_LOP" />
+    </Key>
+    <Property Name="MAGV_LOP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAGV" Type="Int32" />
+    <Property Name="MALOP" Type="Int32" />
+    <Property Name="MANH" Type="Int32" />
+    <Property Name="MAHK" Type="Int32" />
+    <NavigationProperty Name="tb_GiaoVien" Relationship="HSModel.FK4" FromRole="tb_GiaoVien_Lop" ToRole="tb_GiaoVien" />
+    <NavigationProperty Name="tb_Lop" Relationship="HSModel.FK5" FromRole="tb_GiaoVien_Lop" ToRole="tb_Lop" />
+    <NavigationProperty Name="tb_NamHoc" Relationship="HSModel.FK6" FromRole="tb_GiaoVien_Lop" ToRole="tb_NamHoc" />
+    <NavigationProperty Name="tb_HocKy" Relationship="HSModel.FK7" FromRole="tb_GiaoVien_Lop" ToRole="tb_HocKy" />
+  </EntityType>
+  <EntityType Name="tb_HocKy">
+    <Key>
+      <PropertyRef Name="MAHK" />
+    </Key>
+    <Property Name="MAHK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENHK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HESO" Type="Int32" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <Property Name="MANH" Type="Int32" />
+    <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK7" FromRole="tb_HocKy" ToRole="tb_GiaoVien_Lop" />
+    <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK12" FromRole="tb_HocKy" ToRole="tb_KetQua" />
+    <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK16" FromRole="tb_HocKy" ToRole="tb_ViPham" />
+  </EntityType>
+  <EntityType Name="tb_HocSinh">
+    <Key>
+      <PropertyRef Name="MAHS" />
+    </Key>
+    <Property Name="MAHS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
+    <Property Name="MADT" Type="Int32" />
+    <Property Name="MATG" Type="Int32" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DT" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="ISPHANLOP" Type="Boolean" />
+    <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <Property Name="GIOITINH" Type="Int32" />
+    <NavigationProperty Name="tb_ChiTietVP" Relationship="HSModel.FK3" FromRole="tb_HocSinh" ToRole="tb_ChiTietVP" />
+    <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK10" FromRole="tb_HocSinh" ToRole="tb_KetQua" />
+  </EntityType>
+  <EntityType Name="tb_HS_Lop_NamHoc">
+    <Key>
+      <PropertyRef Name="MAHS" />
+      <PropertyRef Name="MALOP" />
+      <PropertyRef Name="MANH" />
+    </Key>
+    <Property Name="MAHS" Type="Int32" Nullable="false" />
+    <Property Name="MALOP" Type="Int32" Nullable="false" />
+    <Property Name="MANH" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_KetQua">
+    <Key>
+      <PropertyRef Name="MAKQ" />
+    </Key>
+    <Property Name="MAKQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAMH" Type="Int32" />
+    <Property Name="MAHS" Type="Int32" />
+    <Property Name="DIEMKIEMTRA" Type="Double" />
+    <Property Name="DIEMTHIL1" Type="Double" />
+    <Property Name="DIEMTHIL2" Type="Double" />
+    <Property Name="DTB" Type="Double" />
+    <Property Name="XEPLOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MANH" Type="Int32" />
+    <Property Name="MAHK" Type="Int32" />
+    <Property Name="MALOP" Type="Int32" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <NavigationProperty Name="tb_HocKy" Relationship="HSModel.FK12" FromRole="tb_KetQua" ToRole="tb_HocKy" />
+    <NavigationProperty Name="tb_HocSinh" Relationship="HSModel.FK10" FromRole="tb_KetQua" ToRole="tb_HocSinh" />
+    <NavigationProperty Name="tb_NamHoc" Relationship="HSModel.FK11" FromRole="tb_KetQua" ToRole="tb_NamHoc" />
+    <NavigationProperty Name="tb_Lop" Relationship="HSModel.FK13" FromRole="tb_KetQua" ToRole="tb_Lop" />
+    <NavigationProperty Name="tb_MonHoc" Relationship="HSModel.FK9" FromRole="tb_KetQua" ToRole="tb_MonHoc" />
+  </EntityType>
+  <EntityType Name="tb_KhoiLop">
+    <Key>
+      <PropertyRef Name="MAKHOI" />
+    </Key>
+    <Property Name="MAKHOI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENKHOI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tb_Lop">
+    <Key>
+      <PropertyRef Name="MALOP" />
+    </Key>
+    <Property Name="MALOP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENLOP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAKHOI" Type="Int32" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK5" FromRole="tb_Lop" ToRole="tb_GiaoVien_Lop" />
+    <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK13" FromRole="tb_Lop" ToRole="tb_KetQua" />
+    <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK17" FromRole="tb_Lop" ToRole="tb_ViPham" />
+  </EntityType>
+  <EntityType Name="tb_MonHoc">
+    <Key>
+      <PropertyRef Name="MAMH" />
+    </Key>
+    <Property Name="MAMH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HESO" Type="Int32" />
+    <Property Name="SOTIET" Type="Int32" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK9" FromRole="tb_MonHoc" ToRole="tb_KetQua" />
+  </EntityType>
+  <EntityType Name="tb_NamHoc">
+    <Key>
+      <PropertyRef Name="MANH" />
+    </Key>
+    <Property Name="MANH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENNH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK6" FromRole="tb_NamHoc" ToRole="tb_GiaoVien_Lop" />
+    <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK11" FromRole="tb_NamHoc" ToRole="tb_KetQua" />
+    <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK15" FromRole="tb_NamHoc" ToRole="tb_ViPham" />
+  </EntityType>
+  <EntityType Name="tb_TonGiao">
+    <Key>
+      <PropertyRef Name="MATG" />
+    </Key>
+    <Property Name="MATG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENTG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_TrinhDo">
+    <Key>
+      <PropertyRef Name="MATD" />
+    </Key>
+    <Property Name="MATD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENTD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_Truong">
+    <Key>
+      <PropertyRef Name="MATRUONG" />
+    </Key>
+    <Property Name="MATRUONG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENTRUONG" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WEB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_User">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FULLNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATRUONG" Type="Int32" />
+    <Property Name="MALOP" Type="Int32" />
+    <Property Name="PHONE" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_ViPham">
+    <Key>
+      <PropertyRef Name="MAVP" />
+    </Key>
+    <Property Name="MAVP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NGAYVP" Type="DateTime" Precision="3" />
+    <Property Name="TONGSOLOI" Type="Int32" />
+    <Property Name="TONGDIEMTRU" Type="Int32" />
+    <Property Name="MALOP" Type="Int32" />
+    <Property Name="MANH" Type="Int32" />
+    <Property Name="MAHK" Type="Int32" />
+    <Property Name="GHICHU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CREATEDBY" Type="Int32" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="UPDATEDBY" Type="Int32" />
+    <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="DELETEDBY" Type="Int32" />
+    <NavigationProperty Name="tb_ChiTietVP" Relationship="HSModel.FK1" FromRole="tb_ViPham" ToRole="tb_ChiTietVP" />
+    <NavigationProperty Name="tb_HocKy" Relationship="HSModel.FK16" FromRole="tb_ViPham" ToRole="tb_HocKy" />
+    <NavigationProperty Name="tb_Lop" Relationship="HSModel.FK17" FromRole="tb_ViPham" ToRole="tb_Lop" />
+    <NavigationProperty Name="tb_NamHoc" Relationship="HSModel.FK15" FromRole="tb_ViPham" ToRole="tb_NamHoc" />
+  </EntityType>
+  <Association Name="FK1">
+    <End Type="HSModel.tb_ViPham" Role="tb_ViPham" Multiplicity="0..1" />
+    <End Type="HSModel.tb_ChiTietVP" Role="tb_ChiTietVP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_ViPham">
+        <PropertyRef Name="MAVP" />
+      </Principal>
+      <Dependent Role="tb_ChiTietVP">
+        <PropertyRef Name="MAVP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK2">
+    <End Type="HSModel.tb_DanhMucLoi" Role="tb_DanhMucLoi" Multiplicity="0..1" />
+    <End Type="HSModel.tb_ChiTietVP" Role="tb_ChiTietVP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_DanhMucLoi">
+        <PropertyRef Name="MALOI" />
+      </Principal>
+      <Dependent Role="tb_ChiTietVP">
+        <PropertyRef Name="MALOI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK3">
+    <End Type="HSModel.tb_HocSinh" Role="tb_HocSinh" Multiplicity="0..1" />
+    <End Type="HSModel.tb_ChiTietVP" Role="tb_ChiTietVP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HocSinh">
+        <PropertyRef Name="MAHS" />
+      </Principal>
+      <Dependent Role="tb_ChiTietVP">
+        <PropertyRef Name="MAHS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK4">
+    <End Type="HSModel.tb_GiaoVien" Role="tb_GiaoVien" Multiplicity="0..1" />
+    <End Type="HSModel.tb_GiaoVien_Lop" Role="tb_GiaoVien_Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_GiaoVien">
+        <PropertyRef Name="MAGV" />
+      </Principal>
+      <Dependent Role="tb_GiaoVien_Lop">
+        <PropertyRef Name="MAGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK5">
+    <End Type="HSModel.tb_Lop" Role="tb_Lop" Multiplicity="0..1" />
+    <End Type="HSModel.tb_GiaoVien_Lop" Role="tb_GiaoVien_Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Lop">
+        <PropertyRef Name="MALOP" />
+      </Principal>
+      <Dependent Role="tb_GiaoVien_Lop">
+        <PropertyRef Name="MALOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK6">
+    <End Type="HSModel.tb_NamHoc" Role="tb_NamHoc" Multiplicity="0..1" />
+    <End Type="HSModel.tb_GiaoVien_Lop" Role="tb_GiaoVien_Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NamHoc">
+        <PropertyRef Name="MANH" />
+      </Principal>
+      <Dependent Role="tb_GiaoVien_Lop">
+        <PropertyRef Name="MANH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK7">
+    <End Type="HSModel.tb_HocKy" Role="tb_HocKy" Multiplicity="0..1" />
+    <End Type="HSModel.tb_GiaoVien_Lop" Role="tb_GiaoVien_Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HocKy">
+        <PropertyRef Name="MAHK" />
+      </Principal>
+      <Dependent Role="tb_GiaoVien_Lop">
+        <PropertyRef Name="MAHK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK12">
+    <End Type="HSModel.tb_HocKy" Role="tb_HocKy" Multiplicity="0..1" />
+    <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HocKy">
+        <PropertyRef Name="MAHK" />
+      </Principal>
+      <Dependent Role="tb_KetQua">
+        <PropertyRef Name="MAHK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK16">
+    <End Type="HSModel.tb_HocKy" Role="tb_HocKy" Multiplicity="0..1" />
+    <End Type="HSModel.tb_ViPham" Role="tb_ViPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HocKy">
+        <PropertyRef Name="MAHK" />
+      </Principal>
+      <Dependent Role="tb_ViPham">
+        <PropertyRef Name="MAHK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK10">
+    <End Type="HSModel.tb_HocSinh" Role="tb_HocSinh" Multiplicity="0..1" />
+    <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HocSinh">
+        <PropertyRef Name="MAHS" />
+      </Principal>
+      <Dependent Role="tb_KetQua">
+        <PropertyRef Name="MAHS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK11">
+    <End Type="HSModel.tb_NamHoc" Role="tb_NamHoc" Multiplicity="0..1" />
+    <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NamHoc">
+        <PropertyRef Name="MANH" />
+      </Principal>
+      <Dependent Role="tb_KetQua">
+        <PropertyRef Name="MANH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK13">
+    <End Type="HSModel.tb_Lop" Role="tb_Lop" Multiplicity="0..1" />
+    <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Lop">
+        <PropertyRef Name="MALOP" />
+      </Principal>
+      <Dependent Role="tb_KetQua">
+        <PropertyRef Name="MALOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK9">
+    <End Type="HSModel.tb_MonHoc" Role="tb_MonHoc" Multiplicity="0..1" />
+    <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_MonHoc">
+        <PropertyRef Name="MAMH" />
+      </Principal>
+      <Dependent Role="tb_KetQua">
+        <PropertyRef Name="MAMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK17">
+    <End Type="HSModel.tb_Lop" Role="tb_Lop" Multiplicity="0..1" />
+    <End Type="HSModel.tb_ViPham" Role="tb_ViPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Lop">
+        <PropertyRef Name="MALOP" />
+      </Principal>
+      <Dependent Role="tb_ViPham">
+        <PropertyRef Name="MALOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK15">
+    <End Type="HSModel.tb_NamHoc" Role="tb_NamHoc" Multiplicity="0..1" />
+    <End Type="HSModel.tb_ViPham" Role="tb_ViPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NamHoc">
+        <PropertyRef Name="MANH" />
+      </Principal>
+      <Dependent Role="tb_ViPham">
+        <PropertyRef Name="MANH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="THONGKE_VIPAHM_NAMHOC_Result">
+    <Property Type="Int32" Name="MANH" Nullable="true" />
+    <Property Type="String" Name="TENNH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TENLOP" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MAKHOI" Nullable="false" />
+    <Property Type="String" Name="TENKHOI" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DIEM" Nullable="true" />
+  </ComplexType>
+</Schema>
