@@ -121,6 +121,11 @@
           <Property Name="DIACHI" Type="nvarchar" MaxLength="250" />
           <Property Name="DT" Type="nvarchar" MaxLength="11" />
           <Property Name="ISPHANLOP" Type="bit" />
+          <Property Name="DIEMTOAN" Type="float" />
+          <Property Name="DIEMLY" Type="float" />
+          <Property Name="DTB" Type="float" />
+          <Property Name="HOCLUC" Type="nvarchar" MaxLength="50" />
+          <Property Name="DIEMHOA" Type="float" />
           <Property Name="TEN" Type="nvarchar" MaxLength="50" />
           <Property Name="CREATEDBY" Type="int" />
           <Property Name="CREATEDDATE" Type="datetime" />
@@ -139,28 +144,6 @@
           <Property Name="MAHS" Type="int" Nullable="false" />
           <Property Name="MALOP" Type="int" Nullable="false" />
           <Property Name="MANH" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tb_KetQua">
-          <Key>
-            <PropertyRef Name="MAKQ" />
-          </Key>
-          <Property Name="MAKQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MAMH" Type="int" />
-          <Property Name="MAHS" Type="int" />
-          <Property Name="DIEMKIEMTRA" Type="float" />
-          <Property Name="DIEMTHIL1" Type="float" />
-          <Property Name="DIEMTHIL2" Type="float" />
-          <Property Name="DTB" Type="float" />
-          <Property Name="XEPLOAI" Type="nvarchar" MaxLength="50" />
-          <Property Name="MANH" Type="int" />
-          <Property Name="MAHK" Type="int" />
-          <Property Name="MALOP" Type="int" />
-          <Property Name="CREATEDBY" Type="int" />
-          <Property Name="CREATEDDATE" Type="datetime" />
-          <Property Name="UPDATEDDATE" Type="datetime" />
-          <Property Name="UPDATEDBY" Type="int" />
-          <Property Name="DELETEDDATE" Type="datetime" />
-          <Property Name="DELETEDBY" Type="int" />
         </EntityType>
         <EntityType Name="tb_KhoiLop">
           <Key>
@@ -266,6 +249,7 @@
           <Property Name="MATRUONG" Type="int" />
           <Property Name="MALOP" Type="int" />
           <Property Name="PHONE" Type="nvarchar" MaxLength="11" />
+          <Property Name="ROLE" Type="nvarchar" MaxLength="50" />
           <Property Name="ADDRESS" Type="nvarchar" MaxLength="250" />
           <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
           <Property Name="CREATEDBY" Type="int" />
@@ -303,54 +287,6 @@
             </Principal>
             <Dependent Role="tb_ChiTietVP">
               <PropertyRef Name="MAVP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK10">
-          <End Role="tb_HocSinh" Type="Self.tb_HocSinh" Multiplicity="0..1" />
-          <End Role="tb_KetQua" Type="Self.tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_HocSinh">
-              <PropertyRef Name="MAHS" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MAHS" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK11">
-          <End Role="tb_NamHoc" Type="Self.tb_NamHoc" Multiplicity="0..1" />
-          <End Role="tb_KetQua" Type="Self.tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_NamHoc">
-              <PropertyRef Name="MANH" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MANH" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK12">
-          <End Role="tb_HocKy" Type="Self.tb_HocKy" Multiplicity="0..1" />
-          <End Role="tb_KetQua" Type="Self.tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_HocKy">
-              <PropertyRef Name="MAHK" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MAHK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK13">
-          <End Role="tb_Lop" Type="Self.tb_Lop" Multiplicity="0..1" />
-          <End Role="tb_KetQua" Type="Self.tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_Lop">
-              <PropertyRef Name="MALOP" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MALOP" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -462,18 +398,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK9">
-          <End Role="tb_MonHoc" Type="Self.tb_MonHoc" Multiplicity="0..1" />
-          <End Role="tb_KetQua" Type="Self.tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_MonHoc">
-              <PropertyRef Name="MAMH" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MAMH" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Function Name="THONGKE_VIPAHM_NAMHOC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MANH" Type="int" Mode="In" />
         </Function>
@@ -487,7 +411,6 @@
           <EntitySet Name="tb_HocKy" EntityType="Self.tb_HocKy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_HocSinh" EntityType="Self.tb_HocSinh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_HS_Lop_NamHoc" EntityType="Self.tb_HS_Lop_NamHoc" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_KetQua" EntityType="Self.tb_KetQua" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_KhoiLop" EntityType="Self.tb_KhoiLop" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Lop" EntityType="Self.tb_Lop" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_MonHoc" EntityType="Self.tb_MonHoc" Schema="dbo" store:Type="Tables" />
@@ -500,22 +423,6 @@
           <AssociationSet Name="FK1" Association="Self.FK1">
             <End Role="tb_ViPham" EntitySet="tb_ViPham" />
             <End Role="tb_ChiTietVP" EntitySet="tb_ChiTietVP" />
-          </AssociationSet>
-          <AssociationSet Name="FK10" Association="Self.FK10">
-            <End Role="tb_HocSinh" EntitySet="tb_HocSinh" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
-          <AssociationSet Name="FK11" Association="Self.FK11">
-            <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
-          <AssociationSet Name="FK12" Association="Self.FK12">
-            <End Role="tb_HocKy" EntitySet="tb_HocKy" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
-          <AssociationSet Name="FK13" Association="Self.FK13">
-            <End Role="tb_Lop" EntitySet="tb_Lop" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
           </AssociationSet>
           <AssociationSet Name="FK15" Association="Self.FK15">
             <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
@@ -553,16 +460,15 @@
             <End Role="tb_HocKy" EntitySet="tb_HocKy" />
             <End Role="tb_GiaoVien_Lop" EntitySet="tb_GiaoVien_Lop" />
           </AssociationSet>
-          <AssociationSet Name="FK9" Association="Self.FK9">
-            <End Role="tb_MonHoc" EntitySet="tb_MonHoc" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="HSEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="THONGKE_VIPAHM_NAMHOC" ReturnType="Collection(HSModel.THONGKE_VIPAHM_NAMHOC_Result)">
+          <Parameter Name="MANH" Mode="In" Type="Int32" />
+          </FunctionImport>
           <EntitySet Name="tb_ChiTietVP" EntityType="HSModel.tb_ChiTietVP" />
           <EntitySet Name="tb_ChucVu" EntityType="HSModel.tb_ChucVu" />
           <EntitySet Name="tb_DanhMucLoi" EntityType="HSModel.tb_DanhMucLoi" />
@@ -572,7 +478,6 @@
           <EntitySet Name="tb_HocKy" EntityType="HSModel.tb_HocKy" />
           <EntitySet Name="tb_HocSinh" EntityType="HSModel.tb_HocSinh" />
           <EntitySet Name="tb_HS_Lop_NamHoc" EntityType="HSModel.tb_HS_Lop_NamHoc" />
-          <EntitySet Name="tb_KetQua" EntityType="HSModel.tb_KetQua" />
           <EntitySet Name="tb_KhoiLop" EntityType="HSModel.tb_KhoiLop" />
           <EntitySet Name="tb_Lop" EntityType="HSModel.tb_Lop" />
           <EntitySet Name="tb_MonHoc" EntityType="HSModel.tb_MonHoc" />
@@ -610,29 +515,9 @@
             <End Role="tb_HocKy" EntitySet="tb_HocKy" />
             <End Role="tb_GiaoVien_Lop" EntitySet="tb_GiaoVien_Lop" />
           </AssociationSet>
-          <AssociationSet Name="FK12" Association="HSModel.FK12">
-            <End Role="tb_HocKy" EntitySet="tb_HocKy" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
           <AssociationSet Name="FK16" Association="HSModel.FK16">
             <End Role="tb_HocKy" EntitySet="tb_HocKy" />
             <End Role="tb_ViPham" EntitySet="tb_ViPham" />
-          </AssociationSet>
-          <AssociationSet Name="FK10" Association="HSModel.FK10">
-            <End Role="tb_HocSinh" EntitySet="tb_HocSinh" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
-          <AssociationSet Name="FK11" Association="HSModel.FK11">
-            <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
-          <AssociationSet Name="FK13" Association="HSModel.FK13">
-            <End Role="tb_Lop" EntitySet="tb_Lop" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
-          </AssociationSet>
-          <AssociationSet Name="FK9" Association="HSModel.FK9">
-            <End Role="tb_MonHoc" EntitySet="tb_MonHoc" />
-            <End Role="tb_KetQua" EntitySet="tb_KetQua" />
           </AssociationSet>
           <AssociationSet Name="FK17" Association="HSModel.FK17">
             <End Role="tb_Lop" EntitySet="tb_Lop" />
@@ -642,10 +527,15 @@
             <End Role="tb_NamHoc" EntitySet="tb_NamHoc" />
             <End Role="tb_ViPham" EntitySet="tb_ViPham" />
           </AssociationSet>
-          <FunctionImport Name="THONGKE_VIPAHM_NAMHOC" ReturnType="Collection(HSModel.THONGKE_VIPAHM_NAMHOC_Result)">
-            <Parameter Name="MANH" Mode="In" Type="Int32" />
-          </FunctionImport>
-        </EntityContainer>
+          </EntityContainer>
+        <ComplexType Name="THONGKE_VIPAHM_NAMHOC_Result">
+          <Property Type="Int32" Name="MANH" Nullable="true" />
+          <Property Type="String" Name="TENNH" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TENLOP" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="MAKHOI" Nullable="false" />
+          <Property Type="String" Name="TENKHOI" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="DIEM" Nullable="true" />
+        </ComplexType>
         <EntityType Name="tb_ChiTietVP">
           <Key>
             <PropertyRef Name="MAVPCT" />
@@ -756,7 +646,6 @@
           <Property Name="DELETEDBY" Type="Int32" />
           <Property Name="MANH" Type="Int32" />
           <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK7" FromRole="tb_HocKy" ToRole="tb_GiaoVien_Lop" />
-          <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK12" FromRole="tb_HocKy" ToRole="tb_KetQua" />
           <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK16" FromRole="tb_HocKy" ToRole="tb_ViPham" />
         </EntityType>
         <EntityType Name="tb_HocSinh">
@@ -774,6 +663,11 @@
           <Property Name="DIACHI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="DT" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
           <Property Name="ISPHANLOP" Type="Boolean" />
+          <Property Name="DIEMTOAN" Type="Double" />
+          <Property Name="DIEMLY" Type="Double" />
+          <Property Name="DTB" Type="Double" />
+          <Property Name="HOCLUC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIEMHOA" Type="Double" />
           <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CREATEDBY" Type="Int32" />
           <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
@@ -783,7 +677,6 @@
           <Property Name="DELETEDBY" Type="Int32" />
           <Property Name="GIOITINH" Type="Int32" />
           <NavigationProperty Name="tb_ChiTietVP" Relationship="HSModel.FK3" FromRole="tb_HocSinh" ToRole="tb_ChiTietVP" />
-          <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK10" FromRole="tb_HocSinh" ToRole="tb_KetQua" />
         </EntityType>
         <EntityType Name="tb_HS_Lop_NamHoc">
           <Key>
@@ -794,33 +687,6 @@
           <Property Name="MAHS" Type="Int32" Nullable="false" />
           <Property Name="MALOP" Type="Int32" Nullable="false" />
           <Property Name="MANH" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tb_KetQua">
-          <Key>
-            <PropertyRef Name="MAKQ" />
-          </Key>
-          <Property Name="MAKQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MAMH" Type="Int32" />
-          <Property Name="MAHS" Type="Int32" />
-          <Property Name="DIEMKIEMTRA" Type="Double" />
-          <Property Name="DIEMTHIL1" Type="Double" />
-          <Property Name="DIEMTHIL2" Type="Double" />
-          <Property Name="DTB" Type="Double" />
-          <Property Name="XEPLOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MANH" Type="Int32" />
-          <Property Name="MAHK" Type="Int32" />
-          <Property Name="MALOP" Type="Int32" />
-          <Property Name="CREATEDBY" Type="Int32" />
-          <Property Name="CREATEDDATE" Type="DateTime" Precision="3" />
-          <Property Name="UPDATEDDATE" Type="DateTime" Precision="3" />
-          <Property Name="UPDATEDBY" Type="Int32" />
-          <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
-          <Property Name="DELETEDBY" Type="Int32" />
-          <NavigationProperty Name="tb_HocKy" Relationship="HSModel.FK12" FromRole="tb_KetQua" ToRole="tb_HocKy" />
-          <NavigationProperty Name="tb_HocSinh" Relationship="HSModel.FK10" FromRole="tb_KetQua" ToRole="tb_HocSinh" />
-          <NavigationProperty Name="tb_NamHoc" Relationship="HSModel.FK11" FromRole="tb_KetQua" ToRole="tb_NamHoc" />
-          <NavigationProperty Name="tb_Lop" Relationship="HSModel.FK13" FromRole="tb_KetQua" ToRole="tb_Lop" />
-          <NavigationProperty Name="tb_MonHoc" Relationship="HSModel.FK9" FromRole="tb_KetQua" ToRole="tb_MonHoc" />
         </EntityType>
         <EntityType Name="tb_KhoiLop">
           <Key>
@@ -844,7 +710,6 @@
           <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
           <Property Name="DELETEDBY" Type="Int32" />
           <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK5" FromRole="tb_Lop" ToRole="tb_GiaoVien_Lop" />
-          <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK13" FromRole="tb_Lop" ToRole="tb_KetQua" />
           <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK17" FromRole="tb_Lop" ToRole="tb_ViPham" />
         </EntityType>
         <EntityType Name="tb_MonHoc">
@@ -861,7 +726,6 @@
           <Property Name="UPDATEDBY" Type="Int32" />
           <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
           <Property Name="DELETEDBY" Type="Int32" />
-          <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK9" FromRole="tb_MonHoc" ToRole="tb_KetQua" />
         </EntityType>
         <EntityType Name="tb_NamHoc">
           <Key>
@@ -876,7 +740,6 @@
           <Property Name="DELETEDDATE" Type="DateTime" Precision="3" />
           <Property Name="DELETEDBY" Type="Int32" />
           <NavigationProperty Name="tb_GiaoVien_Lop" Relationship="HSModel.FK6" FromRole="tb_NamHoc" ToRole="tb_GiaoVien_Lop" />
-          <NavigationProperty Name="tb_KetQua" Relationship="HSModel.FK11" FromRole="tb_NamHoc" ToRole="tb_KetQua" />
           <NavigationProperty Name="tb_ViPham" Relationship="HSModel.FK15" FromRole="tb_NamHoc" ToRole="tb_ViPham" />
         </EntityType>
         <EntityType Name="tb_TonGiao">
@@ -933,6 +796,7 @@
           <Property Name="MATRUONG" Type="Int32" />
           <Property Name="MALOP" Type="Int32" />
           <Property Name="PHONE" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ROLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ADDRESS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CREATEDBY" Type="Int32" />
@@ -1049,18 +913,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK12">
-          <End Type="HSModel.tb_HocKy" Role="tb_HocKy" Multiplicity="0..1" />
-          <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_HocKy">
-              <PropertyRef Name="MAHK" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MAHK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK16">
           <End Type="HSModel.tb_HocKy" Role="tb_HocKy" Multiplicity="0..1" />
           <End Type="HSModel.tb_ViPham" Role="tb_ViPham" Multiplicity="*" />
@@ -1070,54 +922,6 @@
             </Principal>
             <Dependent Role="tb_ViPham">
               <PropertyRef Name="MAHK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK10">
-          <End Type="HSModel.tb_HocSinh" Role="tb_HocSinh" Multiplicity="0..1" />
-          <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_HocSinh">
-              <PropertyRef Name="MAHS" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MAHS" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK11">
-          <End Type="HSModel.tb_NamHoc" Role="tb_NamHoc" Multiplicity="0..1" />
-          <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_NamHoc">
-              <PropertyRef Name="MANH" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MANH" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK13">
-          <End Type="HSModel.tb_Lop" Role="tb_Lop" Multiplicity="0..1" />
-          <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_Lop">
-              <PropertyRef Name="MALOP" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MALOP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK9">
-          <End Type="HSModel.tb_MonHoc" Role="tb_MonHoc" Multiplicity="0..1" />
-          <End Type="HSModel.tb_KetQua" Role="tb_KetQua" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_MonHoc">
-              <PropertyRef Name="MAMH" />
-            </Principal>
-            <Dependent Role="tb_KetQua">
-              <PropertyRef Name="MAMH" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1145,20 +949,24 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="THONGKE_VIPAHM_NAMHOC_Result">
-          <Property Type="Int32" Name="MANH" Nullable="true" />
-          <Property Type="String" Name="TENNH" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="TENLOP" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="MAKHOI" Nullable="false" />
-          <Property Type="String" Name="TENKHOI" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="DIEM" Nullable="true" />
-        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="HSModelStoreContainer" CdmEntityContainer="HSEntities">
+          <FunctionImportMapping FunctionImportName="THONGKE_VIPAHM_NAMHOC" FunctionName="HSModel.Store.THONGKE_VIPAHM_NAMHOC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HSModel.THONGKE_VIPAHM_NAMHOC_Result">
+                <ScalarProperty Name="MANH" ColumnName="MANH" />
+                <ScalarProperty Name="TENNH" ColumnName="TENNH" />
+                <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
+                <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
+                <ScalarProperty Name="TENKHOI" ColumnName="TENKHOI" />
+                <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <EntitySetMapping Name="tb_ChiTietVP">
             <EntityTypeMapping TypeName="HSModel.tb_ChiTietVP">
               <MappingFragment StoreEntitySet="tb_ChiTietVP">
@@ -1278,6 +1086,11 @@
                 <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
                 <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
                 <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="DIEMHOA" ColumnName="DIEMHOA" />
+                <ScalarProperty Name="HOCLUC" ColumnName="HOCLUC" />
+                <ScalarProperty Name="DTB" ColumnName="DTB" />
+                <ScalarProperty Name="DIEMLY" ColumnName="DIEMLY" />
+                <ScalarProperty Name="DIEMTOAN" ColumnName="DIEMTOAN" />
                 <ScalarProperty Name="ISPHANLOP" ColumnName="ISPHANLOP" />
                 <ScalarProperty Name="DT" ColumnName="DT" />
                 <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
@@ -1298,29 +1111,6 @@
                 <ScalarProperty Name="MANH" ColumnName="MANH" />
                 <ScalarProperty Name="MALOP" ColumnName="MALOP" />
                 <ScalarProperty Name="MAHS" ColumnName="MAHS" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_KetQua">
-            <EntityTypeMapping TypeName="HSModel.tb_KetQua">
-              <MappingFragment StoreEntitySet="tb_KetQua">
-                <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
-                <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
-                <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
-                <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
-                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
-                <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
-                <ScalarProperty Name="MALOP" ColumnName="MALOP" />
-                <ScalarProperty Name="MAHK" ColumnName="MAHK" />
-                <ScalarProperty Name="MANH" ColumnName="MANH" />
-                <ScalarProperty Name="XEPLOAI" ColumnName="XEPLOAI" />
-                <ScalarProperty Name="DTB" ColumnName="DTB" />
-                <ScalarProperty Name="DIEMTHIL2" ColumnName="DIEMTHIL2" />
-                <ScalarProperty Name="DIEMTHIL1" ColumnName="DIEMTHIL1" />
-                <ScalarProperty Name="DIEMKIEMTRA" ColumnName="DIEMKIEMTRA" />
-                <ScalarProperty Name="MAHS" ColumnName="MAHS" />
-                <ScalarProperty Name="MAMH" ColumnName="MAMH" />
-                <ScalarProperty Name="MAKQ" ColumnName="MAKQ" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1435,6 +1225,7 @@
                 <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
                 <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
                 <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="ROLE" ColumnName="ROLE" />
                 <ScalarProperty Name="PHONE" ColumnName="PHONE" />
                 <ScalarProperty Name="MALOP" ColumnName="MALOP" />
                 <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
@@ -1465,19 +1256,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="THONGKE_VIPAHM_NAMHOC" FunctionName="HSModel.Store.THONGKE_VIPAHM_NAMHOC">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="HSModel.THONGKE_VIPAHM_NAMHOC_Result">
-                <ScalarProperty Name="MANH" ColumnName="MANH" />
-                <ScalarProperty Name="TENNH" ColumnName="TENNH" />
-                <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
-                <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
-                <ScalarProperty Name="TENKHOI" ColumnName="TENKHOI" />
-                <ScalarProperty Name="DIEM" ColumnName="DIEM" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

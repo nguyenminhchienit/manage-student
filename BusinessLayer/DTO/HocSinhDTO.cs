@@ -25,6 +25,15 @@ namespace BusinessLayer.DTO
         public string TENTG { get; set; }
         public string GHICHU { get; set; }
         public string DIACHI { get; set; }
+
+        public Nullable<double> DIEMTOAN { get; set; }
+        public Nullable<double> DIEMLY { get; set; }
+        public Nullable<double> DIEMHOA { get; set; }
+
+        public string HOCLUC { get; set; }
+
+        public Nullable<double> DTB { get; set; }
+
         public string DT { get; set; }
         public string TEN { get; set; }
         public Nullable<int> CREATEDBY { get; set; }

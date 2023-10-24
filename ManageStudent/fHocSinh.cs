@@ -38,13 +38,45 @@ namespace ManageStudent
 
         private void fHocSinh_Load(object sender, EventArgs e)
         {
-            _showHide(true);
+            //_showHide(true);
             _hs = new HOCSINH();
             _dt = new DANTOC();
             _tg = new TONGIAO();
+            CheckPermission();
             LoadDanToc();
             LoadTonGiao();
             LoadData();
+        }
+
+        public void CheckPermission()
+        {
+            if (Commons.UserStatic != null)
+            {
+                if (Commons.UserStatic.ROLE == "Admin")
+                {
+                    _showHide(true);
+                }
+                else
+                {
+                    bar3.Visible = false;
+                    txtHoTen.Enabled = false;
+                    dateNgaySinh.Enabled = false;
+                    checkGender.Enabled = false;
+                    txtDT.Enabled = false;
+                    txtDiaChi.Enabled = false;
+                    txtEmail.Enabled = false;
+                    cbTonGiao.Enabled = false;
+                    cbDanToc.Enabled = false;
+                    btnPic.Enabled = false;
+                    txtGhiChu.Enabled = false;
+                }
+                
+            }
+            else
+            {
+                this.Close();
+            }
+
         }
 
         void _showHide(bool kt)

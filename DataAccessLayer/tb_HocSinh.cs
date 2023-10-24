@@ -18,7 +18,6 @@ namespace DataAccessLayer
         public tb_HocSinh()
         {
             this.tb_ChiTietVP = new HashSet<tb_ChiTietVP>();
-            this.tb_KetQua = new HashSet<tb_KetQua>();
         }
     
         public int MAHS { get; set; }
@@ -32,6 +31,11 @@ namespace DataAccessLayer
         public string DIACHI { get; set; }
         public string DT { get; set; }
         public Nullable<bool> ISPHANLOP { get; set; }
+        public Nullable<double> DIEMTOAN { get; set; }
+        public Nullable<double> DIEMLY { get; set; }
+        public Nullable<double> DTB { get; set; }
+        public string HOCLUC { get; set; }
+        public Nullable<double> DIEMHOA { get; set; }
         public string TEN { get; set; }
         public Nullable<int> CREATEDBY { get; set; }
         public Nullable<System.DateTime> CREATEDDATE { get; set; }
@@ -43,7 +47,5 @@ namespace DataAccessLayer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_ChiTietVP> tb_ChiTietVP { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_KetQua> tb_KetQua { get; set; }
     }
 }

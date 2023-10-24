@@ -14,12 +14,6 @@ namespace DataAccessLayer
     
     public partial class tb_MonHoc
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_MonHoc()
-        {
-            this.tb_KetQua = new HashSet<tb_KetQua>();
-        }
-    
         public int MAMH { get; set; }
         public string TENMH { get; set; }
         public Nullable<int> HESO { get; set; }
@@ -30,8 +24,5 @@ namespace DataAccessLayer
         public Nullable<int> UPDATEDBY { get; set; }
         public Nullable<System.DateTime> DELETEDDATE { get; set; }
         public Nullable<int> DELETEDBY { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_KetQua> tb_KetQua { get; set; }
     }
 }

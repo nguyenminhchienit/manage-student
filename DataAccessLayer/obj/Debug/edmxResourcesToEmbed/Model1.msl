@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="HSModelStoreContainer" CdmEntityContainer="HSEntities">
+    <FunctionImportMapping FunctionImportName="THONGKE_VIPAHM_NAMHOC" FunctionName="HSModel.Store.THONGKE_VIPAHM_NAMHOC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HSModel.THONGKE_VIPAHM_NAMHOC_Result">
+          <ScalarProperty Name="MANH" ColumnName="MANH" />
+          <ScalarProperty Name="TENNH" ColumnName="TENNH" />
+          <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
+          <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
+          <ScalarProperty Name="TENKHOI" ColumnName="TENKHOI" />
+          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="tb_ChiTietVP">
       <EntityTypeMapping TypeName="HSModel.tb_ChiTietVP">
         <MappingFragment StoreEntitySet="tb_ChiTietVP">
@@ -120,6 +132,11 @@
           <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
           <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
           <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="DIEMHOA" ColumnName="DIEMHOA" />
+          <ScalarProperty Name="HOCLUC" ColumnName="HOCLUC" />
+          <ScalarProperty Name="DTB" ColumnName="DTB" />
+          <ScalarProperty Name="DIEMLY" ColumnName="DIEMLY" />
+          <ScalarProperty Name="DIEMTOAN" ColumnName="DIEMTOAN" />
           <ScalarProperty Name="ISPHANLOP" ColumnName="ISPHANLOP" />
           <ScalarProperty Name="DT" ColumnName="DT" />
           <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
@@ -140,29 +157,6 @@
           <ScalarProperty Name="MANH" ColumnName="MANH" />
           <ScalarProperty Name="MALOP" ColumnName="MALOP" />
           <ScalarProperty Name="MAHS" ColumnName="MAHS" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tb_KetQua">
-      <EntityTypeMapping TypeName="HSModel.tb_KetQua">
-        <MappingFragment StoreEntitySet="tb_KetQua">
-          <ScalarProperty Name="DELETEDBY" ColumnName="DELETEDBY" />
-          <ScalarProperty Name="DELETEDDATE" ColumnName="DELETEDDATE" />
-          <ScalarProperty Name="UPDATEDBY" ColumnName="UPDATEDBY" />
-          <ScalarProperty Name="UPDATEDDATE" ColumnName="UPDATEDDATE" />
-          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
-          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
-          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
-          <ScalarProperty Name="MAHK" ColumnName="MAHK" />
-          <ScalarProperty Name="MANH" ColumnName="MANH" />
-          <ScalarProperty Name="XEPLOAI" ColumnName="XEPLOAI" />
-          <ScalarProperty Name="DTB" ColumnName="DTB" />
-          <ScalarProperty Name="DIEMTHIL2" ColumnName="DIEMTHIL2" />
-          <ScalarProperty Name="DIEMTHIL1" ColumnName="DIEMTHIL1" />
-          <ScalarProperty Name="DIEMKIEMTRA" ColumnName="DIEMKIEMTRA" />
-          <ScalarProperty Name="MAHS" ColumnName="MAHS" />
-          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
-          <ScalarProperty Name="MAKQ" ColumnName="MAKQ" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -277,6 +271,7 @@
           <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
           <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
           <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
           <ScalarProperty Name="PHONE" ColumnName="PHONE" />
           <ScalarProperty Name="MALOP" ColumnName="MALOP" />
           <ScalarProperty Name="MATRUONG" ColumnName="MATRUONG" />
@@ -307,17 +302,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="THONGKE_VIPAHM_NAMHOC" FunctionName="HSModel.Store.THONGKE_VIPAHM_NAMHOC">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="HSModel.THONGKE_VIPAHM_NAMHOC_Result">
-          <ScalarProperty Name="MANH" ColumnName="MANH" />
-          <ScalarProperty Name="TENNH" ColumnName="TENNH" />
-          <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
-          <ScalarProperty Name="MAKHOI" ColumnName="MAKHOI" />
-          <ScalarProperty Name="TENKHOI" ColumnName="TENKHOI" />
-          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

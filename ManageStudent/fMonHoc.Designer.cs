@@ -58,6 +58,7 @@ namespace ManageStudent
             this.SOTIET = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HESO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DELETEDBY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -68,6 +69,7 @@ namespace ManageStudent
             ((System.ComponentModel.ISupportInitialize)(this.txtMonHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -216,6 +218,7 @@ namespace ManageStudent
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.gcDanhSach);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1144, 563);
@@ -369,6 +372,15 @@ namespace ManageStudent
             this.DELETEDBY.VisibleIndex = 4;
             this.DELETEDBY.Width = 27;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(426, 159);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // fMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -394,6 +406,7 @@ namespace ManageStudent
             ((System.ComponentModel.ISupportInitialize)(this.txtMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +441,6 @@ namespace ManageStudent
         private DevExpress.XtraGrid.Columns.GridColumn SOTIET;
         private DevExpress.XtraGrid.Columns.GridColumn HESO;
         private DevExpress.XtraGrid.Columns.GridColumn DELETEDBY;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

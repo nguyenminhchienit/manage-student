@@ -22,6 +22,26 @@ namespace BusinessLayer
             
         }
 
+        public tb_User getItemByEmail(string email)
+        {
+            return db.tb_User.FirstOrDefault(x => x.EMAIL == email);
+
+        }
+
+        public tb_User Add(tb_User user)
+        {
+            try
+            {
+                db.tb_User.Add(user);
+                db.SaveChanges();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error + ", ex);
+            }
+        }
+
         public int Login(string username, string password)
         {
             var us = db.tb_User.FirstOrDefault(x => x.USERNAME == username && x.PASSWORD == password);
@@ -32,6 +52,24 @@ namespace BusinessLayer
             else
             {
                 return 0;
+            }
+        }
+
+        public tb_User Update(tb_User u)
+        {
+            try
+            {
+                var _u = db.tb_User.FirstOrDefault(x => x.EMAIL == u.EMAIL);
+                if (_u != null)
+                {
+                    _u.PASSWORD = u.PASSWORD;
+                }
+                db.SaveChanges();
+                return u;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error + ", ex);
             }
         }
     }

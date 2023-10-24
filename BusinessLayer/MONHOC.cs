@@ -67,6 +67,7 @@ namespace BusinessLayer
                 var _mh = db.tb_MonHoc.FirstOrDefault(x => x.MAMH == mamh);
                 _mh.DELETEDBY = userID;
                 _mh.DELETEDDATE = DateTime.Now;
+                db.tb_MonHoc.Remove(_mh);
                 db.SaveChanges();
             }
             catch (Exception ex)

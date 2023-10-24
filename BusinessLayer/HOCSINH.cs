@@ -21,6 +21,49 @@ namespace BusinessLayer
             return db.tb_HocSinh.FirstOrDefault(x => x.MAHS == mahs);
         }
 
+        public List<HocSinhDTO> getListDiem(int malop)
+        {
+            var listhslop = db.tb_HS_Lop_NamHoc.Where(l => l.MALOP == malop).Select(x => x.MAHS).ToList();
+            
+            var list = db.tb_HocSinh.Where(x => listhslop.Contains(x.MAHS)).ToList();
+            List<HocSinhDTO> lsHS = new List<HocSinhDTO>();
+            HocSinhDTO hsDTO;
+            foreach (var item in list)
+            {
+                hsDTO = new HocSinhDTO();
+                hsDTO.MAHS = item.MAHS;
+                hsDTO.HOTEN = item.HOTEN;
+                hsDTO.DIEMTOAN = (item.DIEMTOAN);
+                hsDTO.DIEMLY = (item.DIEMLY);
+                hsDTO.DIEMHOA = (item.DIEMHOA);
+                hsDTO.DTB = item.DTB;
+                double dtb = Convert.ToDouble(item.DTB);
+                if(item.DTB.ToString() != "")
+                {
+                    string hl = "";
+                    if(dtb > 8f)
+                    {
+                        hl = "Giỏi";
+                    }
+                    else if(dtb > 6.5f)
+                    {
+                        hl = "Khá";
+                    }else if(dtb > 5f)
+                    {
+                        hl = "Trung Bình";
+                    }
+                    else
+                    {
+                        hl = "Yếu";
+                    }
+                    hsDTO.HOCLUC = hl;
+                }
+
+                lsHS.Add(hsDTO);
+            }
+            return lsHS;
+        }
+
         public List<HocSinhDTO> getList()
         {
             var list = db.tb_HocSinh.ToList();
@@ -143,6 +186,9 @@ namespace BusinessLayer
                     _hs.NGAYSINH = hs.NGAYSINH;
                     _hs.HINHANH = hs.HINHANH;
                     _hs.DT = hs.DT;
+                    _hs.DIEMTOAN = hs.DIEMTOAN;
+                    _hs.DIEMLY = hs.DIEMLY;
+                    _hs.DIEMHOA = hs.DIEMHOA;
                     _hs.EMAIL = hs.EMAIL;
                     _hs.DIACHI = hs.DIACHI;
                     _hs.MATG = hs.MATG;

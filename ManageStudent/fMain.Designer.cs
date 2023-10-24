@@ -63,16 +63,20 @@ namespace ManageStudent
             this.mnKetQuaTheoLop = new DevExpress.XtraBars.BarButtonItem();
             this.mnKetTheoMH = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhanLop = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXemDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribonHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribonChucNang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribonDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribonThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -120,16 +124,20 @@ namespace ManageStudent
             this.mnTKTheoNam,
             this.mnKetQuaTheoLop,
             this.mnKetTheoMH,
-            this.btnPhanLop});
+            this.btnPhanLop,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.btnXemDiem,
+            this.barButtonItem3});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(40);
-            this.ribbon.MaxItemId = 35;
+            this.ribbon.MaxItemId = 39;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage5,
-            this.ribbonPage4});
+            this.ribonHeThong,
+            this.ribonChucNang,
+            this.ribonDanhMuc,
+            this.ribonThongKe});
             this.ribbon.Size = new System.Drawing.Size(1378, 229);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -165,6 +173,7 @@ namespace ManageStudent
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // skinRibbonGalleryBarItem1
             // 
@@ -179,6 +188,7 @@ namespace ManageStudent
             this.mnDoiMK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnDoiMK.ImageOptions.Image")));
             this.mnDoiMK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnDoiMK.ImageOptions.LargeImage")));
             this.mnDoiMK.Name = "mnDoiMK";
+            this.mnDoiMK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnDoiMK_ItemClick);
             // 
             // mnHocSinh
             // 
@@ -297,6 +307,7 @@ namespace ManageStudent
             this.mnQLDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnQLDiem.ImageOptions.Image")));
             this.mnQLDiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnQLDiem.ImageOptions.LargeImage")));
             this.mnQLDiem.Name = "mnQLDiem";
+            this.mnQLDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnQLDiem_ItemClick);
             // 
             // mnQLVP
             // 
@@ -352,6 +363,7 @@ namespace ManageStudent
             this.mnQLHocLuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnQLHocLuc.ImageOptions.Image")));
             this.mnQLHocLuc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnQLHocLuc.ImageOptions.LargeImage")));
             this.mnQLHocLuc.Name = "mnQLHocLuc";
+            this.mnQLHocLuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnQLHocLuc_ItemClick);
             // 
             // mnTKTheoNam
             // 
@@ -386,16 +398,45 @@ namespace ManageStudent
             this.btnPhanLop.Name = "btnPhanLop";
             this.btnPhanLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanLop_ItemClick);
             // 
-            // ribbonPage1
+            // barButtonItem1
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.barButtonItem1.Caption = "Tạo tài khoản";
+            this.barButtonItem1.Id = 35;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 36;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.Caption = "barButtonItem3";
+            this.btnXemDiem.Id = 37;
+            this.btnXemDiem.Name = "btnXemDiem";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Xem điểm";
+            this.barButtonItem3.Id = 38;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // ribonHeThong
+            // 
+            this.ribonHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Hệ thống";
+            this.ribonHeThong.Name = "ribonHeThong";
+            this.ribonHeThong.Text = "Hệ thống";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.mnDoiMK, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1, true);
             this.ribbonPageGroup1.ItemLinks.Add(this.mnBackup, true);
             this.ribbonPageGroup1.ItemLinks.Add(this.mnRestore, true);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnThoat, true);
@@ -403,38 +444,38 @@ namespace ManageStudent
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Hệ thống";
             // 
-            // ribbonPage2
+            // ribonChucNang
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribonChucNang.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Chức năng";
+            this.ribonChucNang.Name = "ribonChucNang";
+            this.ribonChucNang.Text = "Chức năng";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.mnQLDiem, true);
             this.ribbonPageGroup2.ItemLinks.Add(this.mnQLVP, true);
-            this.ribbonPageGroup2.ItemLinks.Add(this.mnQLHanhKiem, true);
             this.ribbonPageGroup2.ItemLinks.Add(this.mnQLHocLuc, true);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnPhanLop, true);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Quản lý";
             // 
-            // ribbonPage5
+            // ribonDanhMuc
             // 
-            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribonDanhMuc.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup6,
             this.ribbonPageGroup7,
             this.ribbonPageGroup8});
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "Danh mục";
+            this.ribonDanhMuc.Name = "ribonDanhMuc";
+            this.ribonDanhMuc.Text = "Danh mục";
             // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.mnHocSinh, true);
             this.ribbonPageGroup5.ItemLinks.Add(this.mnDanToc, true);
             this.ribbonPageGroup5.ItemLinks.Add(this.mnTonGiao, true);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem3, true);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Học sinh";
             // 
@@ -459,18 +500,16 @@ namespace ManageStudent
             this.ribbonPageGroup8.ItemLinks.Add(this.mnHocKy, true);
             this.ribbonPageGroup8.ItemLinks.Add(this.mnLop, true);
             this.ribbonPageGroup8.ItemLinks.Add(this.mnKhoa, true);
-            this.ribbonPageGroup8.ItemLinks.Add(this.mnHL);
-            this.ribbonPageGroup8.ItemLinks.Add(this.mnHKiem);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Chung";
             // 
-            // ribbonPage4
+            // ribonThongKe
             // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribonThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup3});
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Thống kê";
+            this.ribonThongKe.Name = "ribonThongKe";
+            this.ribonThongKe.Text = "Thống kê";
             // 
             // ribbonPageGroup4
             // 
@@ -517,6 +556,7 @@ namespace ManageStudent
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản lý sinh viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fMain_FormClosed);
             this.Load += new System.EventHandler(this.fMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
@@ -529,7 +569,7 @@ namespace ManageStudent
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribonHeThong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem mnBackup;
@@ -537,9 +577,9 @@ namespace ManageStudent
         private DevExpress.XtraBars.BarButtonItem btnThoat;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.BarButtonItem mnDoiMK;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribonChucNang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribonThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem mnHocSinh;
         private DevExpress.XtraBars.BarButtonItem mnDanToc;
@@ -554,7 +594,7 @@ namespace ManageStudent
         private DevExpress.XtraBars.BarButtonItem mnHocKy;
         private DevExpress.XtraBars.BarButtonItem mnLop;
         private DevExpress.XtraBars.BarButtonItem mnKhoa;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribonDanhMuc;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
@@ -575,5 +615,9 @@ namespace ManageStudent
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.BarButtonItem btnPhanLop;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnXemDiem;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

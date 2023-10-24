@@ -18,7 +18,6 @@ namespace DataAccessLayer
         public tb_HocKy()
         {
             this.tb_GiaoVien_Lop = new HashSet<tb_GiaoVien_Lop>();
-            this.tb_KetQua = new HashSet<tb_KetQua>();
             this.tb_ViPham = new HashSet<tb_ViPham>();
         }
     
@@ -35,8 +34,6 @@ namespace DataAccessLayer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_GiaoVien_Lop> tb_GiaoVien_Lop { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_KetQua> tb_KetQua { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_ViPham> tb_ViPham { get; set; }
     }

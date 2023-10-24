@@ -41,6 +41,7 @@ namespace ManageStudent
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuenMatKhau = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,8 +66,8 @@ namespace ManageStudent
             // 
             this.lbNameHT.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNameHT.Appearance.Options.UseFont = true;
-            this.lbNameHT.Location = new System.Drawing.Point(186, 51);
-            this.lbNameHT.Margin = new System.Windows.Forms.Padding(6);
+            this.lbNameHT.Location = new System.Drawing.Point(259, 38);
+            this.lbNameHT.Margin = new System.Windows.Forms.Padding(14);
             this.lbNameHT.Name = "lbNameHT";
             this.lbNameHT.Size = new System.Drawing.Size(429, 43);
             this.lbNameHT.TabIndex = 4;
@@ -75,20 +76,20 @@ namespace ManageStudent
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(424, 406);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(6);
+            this.btnThoat.Location = new System.Drawing.Point(954, 914);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(14);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(261, 106);
+            this.btnThoat.Size = new System.Drawing.Size(588, 238);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.Image")));
-            this.btnDangNhap.Location = new System.Drawing.Point(720, 406);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(9);
+            this.btnDangNhap.Location = new System.Drawing.Point(1620, 914);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(21);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(278, 106);
+            this.btnDangNhap.Size = new System.Drawing.Size(626, 238);
             this.btnDangNhap.TabIndex = 6;
             this.btnDangNhap.Text = "Đăng nhập";
             // 
@@ -96,7 +97,8 @@ namespace ManageStudent
             // 
             this.btnLogin.AutoSize = true;
             this.btnLogin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLogin.ImageOptions.SvgImage")));
-            this.btnLogin.Location = new System.Drawing.Point(492, 272);
+            this.btnLogin.Location = new System.Drawing.Point(508, 292);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(157, 52);
             this.btnLogin.TabIndex = 8;
@@ -107,7 +109,8 @@ namespace ManageStudent
             // 
             this.btnClose.AutoSize = true;
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(342, 272);
+            this.btnClose.Location = new System.Drawing.Point(283, 292);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(112, 52);
             this.btnClose.TabIndex = 9;
@@ -118,7 +121,8 @@ namespace ManageStudent
             // 
             this.simpleButton1.AutoSize = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(203, 131);
+            this.simpleButton1.Location = new System.Drawing.Point(209, 131);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(56, 52);
@@ -128,17 +132,31 @@ namespace ManageStudent
             // 
             this.simpleButton2.AutoSize = true;
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(203, 189);
+            this.simpleButton2.Location = new System.Drawing.Point(209, 195);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton2.Size = new System.Drawing.Size(56, 52);
             this.simpleButton2.TabIndex = 11;
             // 
+            // btnQuenMatKhau
+            // 
+            this.btnQuenMatKhau.AutoSize = true;
+            this.btnQuenMatKhau.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnQuenMatKhau.Location = new System.Drawing.Point(722, 394);
+            this.btnQuenMatKhau.Margin = new System.Windows.Forms.Padding(6);
+            this.btnQuenMatKhau.Name = "btnQuenMatKhau";
+            this.btnQuenMatKhau.Size = new System.Drawing.Size(197, 52);
+            this.btnQuenMatKhau.TabIndex = 12;
+            this.btnQuenMatKhau.Text = "Quên mật khẩu";
+            this.btnQuenMatKhau.Click += new System.EventHandler(this.btnQuenMatKhau_Click);
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 404);
+            this.ClientSize = new System.Drawing.Size(947, 461);
+            this.Controls.Add(this.btnQuenMatKhau);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnClose);
@@ -169,5 +187,6 @@ namespace ManageStudent
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnQuenMatKhau;
     }
 }

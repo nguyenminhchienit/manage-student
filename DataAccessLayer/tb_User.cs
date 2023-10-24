@@ -21,6 +21,7 @@ namespace DataAccessLayer
         public Nullable<int> MATRUONG { get; set; }
         public Nullable<int> MALOP { get; set; }
         public string PHONE { get; set; }
+        public string ROLE { get; set; }
         public string ADDRESS { get; set; }
         public string EMAIL { get; set; }
         public Nullable<int> CREATEDBY { get; set; }

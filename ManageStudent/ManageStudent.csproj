@@ -105,6 +105,12 @@
     <Compile Include="fHocKy.Designer.cs">
       <DependentUpon>fHocKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="fHocLuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHocLuc.Designer.cs">
+      <DependentUpon>fHocLuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="fHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,17 +147,47 @@
     <Compile Include="fPhanLop.Designer.cs">
       <DependentUpon>fPhanLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="fQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyDiem.Designer.cs">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="fQuanLyViPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fQuanLyViPham.Designer.cs">
       <DependentUpon>fQuanLyViPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuenMatKhau.Designer.cs">
+      <DependentUpon>fQuenMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThongKeViPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fThongKeViPham.Designer.cs">
       <DependentUpon>fThongKeViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fXemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fXemDiem.Designer.cs">
+      <DependentUpon>fXemDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,6 +215,9 @@
     <EmbeddedResource Include="fHocKy.resx">
       <DependentUpon>fHocKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fHocLuc.resx">
+      <DependentUpon>fHocLuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fHocSinh.resx">
       <DependentUpon>fHocSinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,11 +236,26 @@
     <EmbeddedResource Include="fPhanLop.resx">
       <DependentUpon>fPhanLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyDiem.resx">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyTaiKhoan.resx">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fQuanLyViPham.resx">
       <DependentUpon>fQuanLyViPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuenMatKhau.resx">
+      <DependentUpon>fQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fThongKeViPham.resx">
       <DependentUpon>fThongKeViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fXemDiem.resx">
+      <DependentUpon>fXemDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

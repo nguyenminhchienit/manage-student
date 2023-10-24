@@ -36,7 +36,6 @@ namespace DataAccessLayer
         public virtual DbSet<tb_HocKy> tb_HocKy { get; set; }
         public virtual DbSet<tb_HocSinh> tb_HocSinh { get; set; }
         public virtual DbSet<tb_HS_Lop_NamHoc> tb_HS_Lop_NamHoc { get; set; }
-        public virtual DbSet<tb_KetQua> tb_KetQua { get; set; }
         public virtual DbSet<tb_KhoiLop> tb_KhoiLop { get; set; }
         public virtual DbSet<tb_Lop> tb_Lop { get; set; }
         public virtual DbSet<tb_MonHoc> tb_MonHoc { get; set; }

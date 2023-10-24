@@ -54,5 +54,11 @@ namespace ManageStudent
             }
 
         }
+
+        private void btnQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            fQuenMatKhau f = new fQuenMatKhau();
+            f.ShowDialog();
+        }
     }
 }

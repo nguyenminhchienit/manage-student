@@ -38,14 +38,47 @@ namespace ManageStudent
 
         private void fGiaoVien_Load(object sender, EventArgs e)
         {
-            _showHide(true);
+            //_showHide(true);
             _gv = new GIAOVIEN();
             _td = new TRINHDO();
             _cv = new CHUCVU();
+
+            CheckPermission();
+
             LoadChucVu();
             LoadTrinhDo();
             LoadData();
             
+        }
+
+        public void CheckPermission()
+        {
+            if (Commons.UserStatic != null)
+            {
+                if (Commons.UserStatic.ROLE == "Admin")
+                {
+                    _showHide(true);
+                }
+                else
+                {
+                    bar3.Visible = false;
+                    txtHoTen.Enabled = false;
+                    dateNgaySinh.Enabled = false;
+                    checkGender.Enabled = false;
+                    txtDT.Enabled = false;
+                    txtDiaChi.Enabled = false;
+                    txtEmail.Enabled = false;
+                    btnPic.Enabled = false;
+                    cbChucVu.Enabled = false;
+                    cbTrinhDo.Enabled = false;
+                }
+
+            }
+            else
+            {
+                this.Close();
+            }
+
         }
 
         void _showHide(bool kt)

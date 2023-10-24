@@ -50,6 +50,7 @@ namespace ManageStudent
             cbHocKy.DataSource = _hk.getList(int.Parse(cbNamHoc.SelectedValue.ToString()));
             cbHocKy.DisplayMember = "TENHK";
             cbHocKy.ValueMember = "MAHK";
+            getListVP();
         }
 
         private void CbKhoiLop_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace ManageStudent
             cbLop.DataSource = _lop.getList(int.Parse(cbKhoiLop.SelectedValue.ToString()));
             cbLop.DisplayMember = "TENLOP";
             cbLop.ValueMember = "MALOP";
+            getListVP();
         }
 
         public void getListVP()
