@@ -105,12 +105,12 @@ namespace ManageStudent
             tb_HocSinh hs = _hs.getItem(int.Parse(lkHocSinh.EditValue.ToString()));
             if(hs != null)
             {
-                hs.DIEMHOA = float.Parse(spHoa.Text);
-                hs.DIEMLY = float.Parse(spLy.Text);
-                hs.DIEMTOAN = float.Parse(spToan.Text);
-                float dh = float.Parse(spHoa.Text);
-                float dt = float.Parse(spToan.Text);
-                float dl = float.Parse(spLy.Text);
+                hs.DIEMHOA = float.Parse(txtHoa.Text);
+                hs.DIEMLY = float.Parse(txtLy.Text);
+                hs.DIEMTOAN = float.Parse(txtToan.Text);
+                float dh = float.Parse(txtHoa.Text);
+                float dt = float.Parse(txtToan.Text);
+                float dl = float.Parse(txtLy.Text);
                 hs.DTB = Math.Round(float.Parse(((dt + dl + dh) / 3).ToString()),1);
                 _hs.Update(hs);
                 MessageBox.Show("Cập nhật điểm thành công", "Thông báo", MessageBoxButtons.OK);
@@ -132,10 +132,55 @@ namespace ManageStudent
         {
             _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAHS").ToString());
             var hs = _hs.getItem(_id);
-            spToan.Text = hs.DIEMTOAN.ToString();
-            spLy.Text = hs.DIEMLY.ToString();
-            spHoa.Text = hs.DIEMHOA.ToString();
+            txtToan.Text = hs.DIEMTOAN.ToString();
+            txtLy.Text = hs.DIEMLY.ToString();
+            txtHoa.Text = hs.DIEMHOA.ToString();
             lkHocSinh.EditValue = hs.MAHS;
+        }
+
+        private void txtToan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự vừa được nhấn có phải là số hoặc dấu chấm
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true; // Ngăn không cho ký tự được nhập vào TextBox
+            }
+
+            // Đảm bảo chỉ có một dấu chấm được phép
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true; // Ngăn không cho thêm dấu chấm
+            }
+        }
+
+        private void txtLy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự vừa được nhấn có phải là số hoặc dấu chấm
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true; // Ngăn không cho ký tự được nhập vào TextBox
+            }
+
+            // Đảm bảo chỉ có một dấu chấm được phép
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true; // Ngăn không cho thêm dấu chấm
+            }
+        }
+
+        private void txtHoa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự vừa được nhấn có phải là số hoặc dấu chấm
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true; // Ngăn không cho ký tự được nhập vào TextBox
+            }
+
+            // Đảm bảo chỉ có một dấu chấm được phép
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true; // Ngăn không cho thêm dấu chấm
+            }
         }
     }
 }

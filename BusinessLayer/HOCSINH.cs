@@ -213,6 +213,7 @@ namespace BusinessLayer
                 var _hs = db.tb_HocSinh.FirstOrDefault(x => x.MAHS == mahs);
                 _hs.DELETEDBY = userID;
                 _hs.DELETEDDATE = DateTime.Now;
+                db.tb_HocSinh.Remove(_hs);
                 db.SaveChanges();
             }
             catch (Exception ex)

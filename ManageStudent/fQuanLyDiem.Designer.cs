@@ -42,13 +42,13 @@ namespace ManageStudent
             this.DTB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar3 = new DevExpress.XtraBars.Bar();
-            this.btnCapNhat = new DevExpress.XtraBars.BarButtonItem();
             this.btnIn = new DevExpress.XtraBars.BarButtonItem();
             this.btnDong = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnCapNhat = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnCapNhatDiem = new DevExpress.XtraEditors.SimpleButton();
             this.lkHocSinh = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -67,12 +67,12 @@ namespace ManageStudent
             this.lbHo = new DevExpress.XtraEditors.LabelControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
-            this.spHoa = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.spToan = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.spLy = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtToan = new System.Windows.Forms.TextBox();
+            this.txtLy = new System.Windows.Forms.TextBox();
+            this.txtHoa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
@@ -83,9 +83,6 @@ namespace ManageStudent
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spHoa.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spToan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spLy.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView1
@@ -233,13 +230,6 @@ namespace ManageStudent
             this.bar3.OptionsBar.UseWholeRow = true;
             this.bar3.Text = "Main menu";
             // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Caption = "Cập nhật";
-            this.btnCapNhat.Id = 0;
-            this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
-            this.btnCapNhat.Name = "btnCapNhat";
-            // 
             // btnIn
             // 
             this.btnIn.Caption = "In";
@@ -285,6 +275,13 @@ namespace ManageStudent
             this.barDockControlRight.Location = new System.Drawing.Point(1359, 36);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 643);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Caption = "Cập nhật";
+            this.btnCapNhat.Id = 0;
+            this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
+            this.btnCapNhat.Name = "btnCapNhat";
             // 
             // btnXoa
             // 
@@ -432,12 +429,12 @@ namespace ManageStudent
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtHoa);
+            this.splitContainer1.Panel1.Controls.Add(this.txtLy);
+            this.splitContainer1.Panel1.Controls.Add(this.txtToan);
             this.splitContainer1.Panel1.Controls.Add(this.btnXemDiem);
-            this.splitContainer1.Panel1.Controls.Add(this.spHoa);
             this.splitContainer1.Panel1.Controls.Add(this.labelControl6);
-            this.splitContainer1.Panel1.Controls.Add(this.spToan);
             this.splitContainer1.Panel1.Controls.Add(this.labelControl4);
-            this.splitContainer1.Panel1.Controls.Add(this.spLy);
             this.splitContainer1.Panel1.Controls.Add(this.labelControl2);
             this.splitContainer1.Panel1.Controls.Add(this.btnCapNhatDiem);
             this.splitContainer1.Panel1.Controls.Add(this.lkHocSinh);
@@ -469,28 +466,6 @@ namespace ManageStudent
             this.btnXemDiem.Text = "Xem điểm";
             this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
             // 
-            // spHoa
-            // 
-            this.spHoa.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spHoa.Location = new System.Drawing.Point(908, 153);
-            this.spHoa.MenuManager = this.barManager1;
-            this.spHoa.Name = "spHoa";
-            this.spHoa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spHoa.Properties.IsFloatValue = false;
-            this.spHoa.Properties.Mask.EditMask = "N00";
-            this.spHoa.Properties.MaxValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.spHoa.Size = new System.Drawing.Size(150, 32);
-            this.spHoa.TabIndex = 39;
-            // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(811, 157);
@@ -498,28 +473,6 @@ namespace ManageStudent
             this.labelControl6.Size = new System.Drawing.Size(86, 24);
             this.labelControl6.TabIndex = 38;
             this.labelControl6.Text = "Điểm hóa";
-            // 
-            // spToan
-            // 
-            this.spToan.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spToan.Location = new System.Drawing.Point(908, 60);
-            this.spToan.MenuManager = this.barManager1;
-            this.spToan.Name = "spToan";
-            this.spToan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spToan.Properties.IsFloatValue = false;
-            this.spToan.Properties.Mask.EditMask = "N00";
-            this.spToan.Properties.MaxValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.spToan.Size = new System.Drawing.Size(150, 32);
-            this.spToan.TabIndex = 37;
             // 
             // labelControl4
             // 
@@ -529,28 +482,6 @@ namespace ManageStudent
             this.labelControl4.TabIndex = 36;
             this.labelControl4.Text = "Điểm toán";
             // 
-            // spLy
-            // 
-            this.spLy.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spLy.Location = new System.Drawing.Point(908, 104);
-            this.spLy.MenuManager = this.barManager1;
-            this.spLy.Name = "spLy";
-            this.spLy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spLy.Properties.IsFloatValue = false;
-            this.spLy.Properties.Mask.EditMask = "N00";
-            this.spLy.Properties.MaxValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.spLy.Size = new System.Drawing.Size(150, 32);
-            this.spLy.TabIndex = 35;
-            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(811, 108);
@@ -558,6 +489,30 @@ namespace ManageStudent
             this.labelControl2.Size = new System.Drawing.Size(68, 24);
             this.labelControl2.TabIndex = 34;
             this.labelControl2.Text = "Điểm lý";
+            // 
+            // txtToan
+            // 
+            this.txtToan.Location = new System.Drawing.Point(908, 65);
+            this.txtToan.Name = "txtToan";
+            this.txtToan.Size = new System.Drawing.Size(150, 26);
+            this.txtToan.TabIndex = 41;
+            this.txtToan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToan_KeyPress);
+            // 
+            // txtLy
+            // 
+            this.txtLy.Location = new System.Drawing.Point(908, 108);
+            this.txtLy.Name = "txtLy";
+            this.txtLy.Size = new System.Drawing.Size(150, 26);
+            this.txtLy.TabIndex = 42;
+            this.txtLy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLy_KeyPress);
+            // 
+            // txtHoa
+            // 
+            this.txtHoa.Location = new System.Drawing.Point(908, 155);
+            this.txtHoa.Name = "txtHoa";
+            this.txtHoa.Size = new System.Drawing.Size(150, 26);
+            this.txtHoa.TabIndex = 43;
+            this.txtHoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoa_KeyPress);
             // 
             // fQuanLyDiem
             // 
@@ -583,9 +538,6 @@ namespace ManageStudent
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spHoa.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spToan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spLy.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,13 +579,13 @@ namespace ManageStudent
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl lbHo;
         private DevExpress.XtraBars.BarButtonItem btnXoa;
-        private DevExpress.XtraEditors.SpinEdit spHoa;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.SpinEdit spToan;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.SpinEdit spLy;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnXemDiem;
         private DevExpress.XtraGrid.Columns.GridColumn DTB;
+        private System.Windows.Forms.TextBox txtToan;
+        private System.Windows.Forms.TextBox txtHoa;
+        private System.Windows.Forms.TextBox txtLy;
     }
 }

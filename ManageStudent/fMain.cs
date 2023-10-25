@@ -191,5 +191,15 @@ namespace ManageStudent
         {
             openForm(typeof(fHocLuc));
         }
+
+        private void mnTonGiao_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(fTonGiao));
+        }
+
+        private void mnDanToc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(fDanToc));
+        }
     }
 }

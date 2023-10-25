@@ -66,6 +66,7 @@ namespace BusinessLayer
                 var _mh = db.tb_DanToc.FirstOrDefault(x => x.MADT == madt);
                 _mh.DELETEDBY = userID;
                 _mh.DELETEDDATE = DateTime.Now;
+                db.tb_DanToc.Remove(_mh);
                 db.SaveChanges();
             }
             catch (Exception ex)

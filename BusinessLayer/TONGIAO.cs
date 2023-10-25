@@ -66,6 +66,7 @@ namespace BusinessLayer
                 var _mh = db.tb_TonGiao.FirstOrDefault(x => x.MATG == matg);
                 _mh.DELETEDBY = userID;
                 _mh.DELETEDDATE = DateTime.Now;
+                db.tb_TonGiao.Remove(_mh);
                 db.SaveChanges();
             }
             catch (Exception ex)

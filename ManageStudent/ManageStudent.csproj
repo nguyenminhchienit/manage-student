@@ -93,6 +93,12 @@
     <Compile Include="fDanhMucViPham.Designer.cs">
       <DependentUpon>fDanhMucViPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDanToc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDanToc.Designer.cs">
+      <DependentUpon>fDanToc.cs</DependentUpon>
+    </Compile>
     <Compile Include="fGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,12 @@
     <Compile Include="fThongKeViPham.Designer.cs">
       <DependentUpon>fThongKeViPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTonGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTonGiao.Designer.cs">
+      <DependentUpon>fTonGiao.cs</DependentUpon>
+    </Compile>
     <Compile Include="fXemDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDanhMucViPham.resx">
       <DependentUpon>fDanhMucViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDanToc.resx">
+      <DependentUpon>fDanToc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fGiaoVien.resx">
       <DependentUpon>fGiaoVien.cs</DependentUpon>
@@ -253,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fThongKeViPham.resx">
       <DependentUpon>fThongKeViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTonGiao.resx">
+      <DependentUpon>fTonGiao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fXemDiem.resx">
       <DependentUpon>fXemDiem.cs</DependentUpon>

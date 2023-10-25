@@ -206,6 +206,7 @@ namespace ManageStudent
             this.mnDanToc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnDanToc.ImageOptions.Image")));
             this.mnDanToc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnDanToc.ImageOptions.LargeImage")));
             this.mnDanToc.Name = "mnDanToc";
+            this.mnDanToc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnDanToc_ItemClick);
             // 
             // mnTonGiao
             // 
@@ -214,6 +215,7 @@ namespace ManageStudent
             this.mnTonGiao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnTonGiao.ImageOptions.Image")));
             this.mnTonGiao.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnTonGiao.ImageOptions.LargeImage")));
             this.mnTonGiao.Name = "mnTonGiao";
+            this.mnTonGiao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnTonGiao_ItemClick);
             // 
             // mnGiaovien
             // 
