@@ -64,5 +64,19 @@ namespace BusinessLayer
                 throw new Exception("Error + ", ex);
             }
         }
+
+        public void Delete(int mahs)
+        {
+            try
+            {
+                var _hsl = db.tb_HS_Lop_NamHoc.FirstOrDefault(x => x.MAHS == mahs);
+                db.tb_HS_Lop_NamHoc.Remove(_hsl);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error + ", ex);
+            }
+        }
     }
 }

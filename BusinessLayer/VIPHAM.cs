@@ -70,13 +70,12 @@ namespace BusinessLayer
             }
         }
 
-        public void Delete(int mavp, int userID)
+        public void Delete(int mavp)
         {
             try
             {
                 var _mh = db.tb_ViPham.FirstOrDefault(x => x.MAVP == mavp);
-                _mh.DELETEDBY = userID;
-                _mh.DELETEDDATE = DateTime.Now;
+                db.tb_ViPham.Remove(_mh);
                 db.SaveChanges();
             }
             catch (Exception ex)

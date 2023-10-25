@@ -66,13 +66,13 @@ namespace ManageStudent
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.lbHo = new DevExpress.XtraEditors.LabelControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtHoa = new System.Windows.Forms.TextBox();
+            this.txtLy = new System.Windows.Forms.TextBox();
+            this.txtToan = new System.Windows.Forms.TextBox();
             this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtToan = new System.Windows.Forms.TextBox();
-            this.txtLy = new System.Windows.Forms.TextBox();
-            this.txtHoa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
@@ -236,6 +236,7 @@ namespace ManageStudent
             this.btnIn.Id = 5;
             this.btnIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnIn.ImageOptions.SvgImage")));
             this.btnIn.Name = "btnIn";
+            this.btnIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnIn_ItemClick);
             // 
             // btnDong
             // 
@@ -456,6 +457,30 @@ namespace ManageStudent
             this.splitContainer1.SplitterDistance = 207;
             this.splitContainer1.TabIndex = 9;
             // 
+            // txtHoa
+            // 
+            this.txtHoa.Location = new System.Drawing.Point(908, 155);
+            this.txtHoa.Name = "txtHoa";
+            this.txtHoa.Size = new System.Drawing.Size(150, 26);
+            this.txtHoa.TabIndex = 43;
+            this.txtHoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoa_KeyPress);
+            // 
+            // txtLy
+            // 
+            this.txtLy.Location = new System.Drawing.Point(908, 108);
+            this.txtLy.Name = "txtLy";
+            this.txtLy.Size = new System.Drawing.Size(150, 26);
+            this.txtLy.TabIndex = 42;
+            this.txtLy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLy_KeyPress);
+            // 
+            // txtToan
+            // 
+            this.txtToan.Location = new System.Drawing.Point(908, 65);
+            this.txtToan.Name = "txtToan";
+            this.txtToan.Size = new System.Drawing.Size(150, 26);
+            this.txtToan.TabIndex = 41;
+            this.txtToan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToan_KeyPress);
+            // 
             // btnXemDiem
             // 
             this.btnXemDiem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXemDiem.ImageOptions.SvgImage")));
@@ -489,30 +514,6 @@ namespace ManageStudent
             this.labelControl2.Size = new System.Drawing.Size(68, 24);
             this.labelControl2.TabIndex = 34;
             this.labelControl2.Text = "Điểm lý";
-            // 
-            // txtToan
-            // 
-            this.txtToan.Location = new System.Drawing.Point(908, 65);
-            this.txtToan.Name = "txtToan";
-            this.txtToan.Size = new System.Drawing.Size(150, 26);
-            this.txtToan.TabIndex = 41;
-            this.txtToan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToan_KeyPress);
-            // 
-            // txtLy
-            // 
-            this.txtLy.Location = new System.Drawing.Point(908, 108);
-            this.txtLy.Name = "txtLy";
-            this.txtLy.Size = new System.Drawing.Size(150, 26);
-            this.txtLy.TabIndex = 42;
-            this.txtLy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLy_KeyPress);
-            // 
-            // txtHoa
-            // 
-            this.txtHoa.Location = new System.Drawing.Point(908, 155);
-            this.txtHoa.Name = "txtHoa";
-            this.txtHoa.Size = new System.Drawing.Size(150, 26);
-            this.txtHoa.TabIndex = 43;
-            this.txtHoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoa_KeyPress);
             // 
             // fQuanLyDiem
             // 

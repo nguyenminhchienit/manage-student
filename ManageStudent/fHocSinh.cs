@@ -31,6 +31,7 @@ namespace ManageStudent
 
         bool _them;
         HOCSINH _hs;
+        HOCSINH_LOP_NAMHOC _hsl;
         DANTOC _dt;
         TONGIAO _tg;
         int _id = 0;
@@ -42,6 +43,7 @@ namespace ManageStudent
             _hs = new HOCSINH();
             _dt = new DANTOC();
             _tg = new TONGIAO();
+            _hsl = new HOCSINH_LOP_NAMHOC();
             CheckPermission();
             LoadDanToc();
             LoadTonGiao();
@@ -195,6 +197,12 @@ namespace ManageStudent
         {
             if (MessageBox.Show("Bạn có chắc muốn xóa không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                if (_hs.FindStudentViPham(_id))
+                {
+                    MessageBox.Show("Không được xóa học sinh vì học sinh đang vi phạm", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                _hsl.Delete(_id);
                 _hs.Delete(_id, Commons.UserStatic.UID);
                 LoadData();
             }

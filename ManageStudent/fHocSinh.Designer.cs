@@ -186,7 +186,6 @@ namespace ManageStudent
             // 
             this.btnDong.Caption = "Đóng";
             this.btnDong.Id = 6;
-            this.btnDong.ImageOptions.Image = global::ManageStudent.Properties.Resources.Delete_16x16;
             this.btnDong.Name = "btnDong";
             this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
             // 

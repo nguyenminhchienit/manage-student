@@ -21,6 +21,14 @@ namespace BusinessLayer
             return db.tb_HocSinh.FirstOrDefault(x => x.MAHS == mahs);
         }
 
+        public List<tb_HocSinh> getListOrigin(int malop)
+        {
+            var listhslop = db.tb_HS_Lop_NamHoc.Where(l => l.MALOP == malop).Select(x => x.MAHS).ToList();
+
+            var list = db.tb_HocSinh.Where(x => listhslop.Contains(x.MAHS)).ToList();
+            return list;
+        }
+
         public List<HocSinhDTO> getListDiem(int malop)
         {
             var listhslop = db.tb_HS_Lop_NamHoc.Where(l => l.MALOP == malop).Select(x => x.MAHS).ToList();
@@ -63,6 +71,8 @@ namespace BusinessLayer
             }
             return lsHS;
         }
+
+
 
         public List<HocSinhDTO> getList()
         {
@@ -215,6 +225,23 @@ namespace BusinessLayer
                 _hs.DELETEDDATE = DateTime.Now;
                 db.tb_HocSinh.Remove(_hs);
                 db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error + ", ex);
+            }
+        }
+
+        public bool FindStudentViPham(int mahs)
+        {
+            try
+            {
+                var _hsvp = db.tb_ChiTietVP.FirstOrDefault(x => x.MAHS == mahs);
+                if(_hsvp == null)
+                {
+                    return false;
+                }
+                return true;
             }
             catch (Exception ex)
             {

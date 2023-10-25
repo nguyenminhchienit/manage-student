@@ -43,6 +43,7 @@ namespace ManageStudent
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.cbLop = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -50,15 +51,14 @@ namespace ManageStudent
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbNamHoc = new System.Windows.Forms.ComboBox();
             this.lbHo = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.NGAYVP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TONGSOLOI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TONGDIEMTRU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DELETEDBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MAVP = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -203,6 +203,14 @@ namespace ManageStudent
             this.splitContainer1.SplitterDistance = 81;
             this.splitContainer1.TabIndex = 7;
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(375, 28);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(60, 24);
+            this.labelControl2.TabIndex = 35;
+            this.labelControl2.Text = "Học kỳ";
+            // 
             // cbHocKy
             // 
             this.cbHocKy.FormattingEnabled = true;
@@ -259,14 +267,6 @@ namespace ManageStudent
             this.lbHo.TabIndex = 29;
             this.lbHo.Text = "Năm học";
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(375, 28);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(60, 24);
-            this.labelControl2.TabIndex = 35;
-            this.labelControl2.Text = "Học kỳ";
-            // 
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -281,6 +281,7 @@ namespace ManageStudent
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach,
             this.gridView1});
+            this.gcDanhSach.Click += new System.EventHandler(this.gcDanhSach_Click);
             // 
             // gvDanhSach
             // 
@@ -289,7 +290,7 @@ namespace ManageStudent
             this.TONGSOLOI,
             this.TONGDIEMTRU,
             this.GHICHU,
-            this.DELETEDBY});
+            this.MAVP});
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
             this.gvDanhSach.OptionsView.ShowGroupPanel = false;
@@ -348,22 +349,20 @@ namespace ManageStudent
             this.GHICHU.VisibleIndex = 3;
             this.GHICHU.Width = 150;
             // 
-            // DELETEDBY
-            // 
-            this.DELETEDBY.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.DELETEDBY.AppearanceHeader.Options.UseFont = true;
-            this.DELETEDBY.FieldName = "DELETEDBY";
-            this.DELETEDBY.MaxWidth = 27;
-            this.DELETEDBY.MinWidth = 27;
-            this.DELETEDBY.Name = "DELETEDBY";
-            this.DELETEDBY.Visible = true;
-            this.DELETEDBY.VisibleIndex = 4;
-            this.DELETEDBY.Width = 27;
-            // 
             // gridView1
             // 
             this.gridView1.GridControl = this.gcDanhSach;
             this.gridView1.Name = "gridView1";
+            // 
+            // MAVP
+            // 
+            this.MAVP.Caption = "MAVP";
+            this.MAVP.FieldName = "MAVP";
+            this.MAVP.MinWidth = 30;
+            this.MAVP.Name = "MAVP";
+            this.MAVP.Visible = true;
+            this.MAVP.VisibleIndex = 4;
+            this.MAVP.Width = 112;
             // 
             // fDanhMucViPham
             // 
@@ -412,7 +411,6 @@ namespace ManageStudent
         private DevExpress.XtraGrid.Columns.GridColumn TONGSOLOI;
         private DevExpress.XtraGrid.Columns.GridColumn TONGDIEMTRU;
         private DevExpress.XtraGrid.Columns.GridColumn GHICHU;
-        private DevExpress.XtraGrid.Columns.GridColumn DELETEDBY;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.ComboBox cbLop;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -422,5 +420,6 @@ namespace ManageStudent
         private DevExpress.XtraEditors.LabelControl lbHo;
         private System.Windows.Forms.ComboBox cbHocKy;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraGrid.Columns.GridColumn MAVP;
     }
 }

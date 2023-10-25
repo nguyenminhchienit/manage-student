@@ -94,7 +94,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _vpct = db.tb_ChiTietVP.FirstOrDefault(x => x.MAVPCT == mavp);
+                var _vpct = db.tb_ChiTietVP.FirstOrDefault(x => x.MAVP == mavp);
                 db.tb_ChiTietVP.Remove(_vpct);
                 db.SaveChanges();
             }

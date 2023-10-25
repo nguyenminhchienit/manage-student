@@ -30,6 +30,7 @@ namespace ManageStudent
         NAMHOC _nh;
         LOP _lop;
         VIPHAM _vp;
+        CTVP _ctvp;
         int _id = 0;
         private void fDanhMucViPham_Load(object sender, EventArgs e)
         {
@@ -39,6 +40,7 @@ namespace ManageStudent
             _lop = new LOP();
             _khoi = new KHOA();
             _vp = new VIPHAM();
+            _ctvp = new CTVP(); 
             LoadData();
             getListVP();
             cbKhoiLop.SelectedIndexChanged += CbKhoiLop_SelectedIndexChanged;
@@ -116,7 +118,8 @@ namespace ManageStudent
         {
             if (MessageBox.Show("Bạn có chắc muốn xóa không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _vp.Delete(_id, Commons.UserStatic.UID);
+                _ctvp.Delete(_id, Commons.UserStatic.UID);
+                _vp.Delete(_id);
             }
         }
 
@@ -129,6 +132,14 @@ namespace ManageStudent
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Close();
+        }
+
+        private void gcDanhSach_Click(object sender, EventArgs e)
+        {
+            if (gvDanhSach.RowCount > 0)
+            {
+                _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAVP").ToString());
+            }
         }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using BusinessLayer;
 using DataAccessLayer;
+using DevExpress.XtraPrinting.Preview;
+using DevExpress.XtraReports.UI;
+using ManageStudent.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -181,6 +184,15 @@ namespace ManageStudent
             {
                 e.Handled = true; // Ngăn không cho thêm dấu chấm
             }
+        }
+
+        private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Diem_report report = new Diem_report();
+            DocumentViewer documentViewer = new DocumentViewer();
+            report.InitData(_hs.getListOrigin(int.Parse(cbLop.SelectedValue.ToString())));
+            documentViewer.DocumentSource = report;
+            report.ShowPreviewDialog();
         }
     }
 }
