@@ -58,6 +58,7 @@
     <Compile Include="DTO\GiaoVienDTO.cs" />
     <Compile Include="DTO\HocKyDTO.cs" />
     <Compile Include="DTO\HocSinhDTO.cs" />
+    <Compile Include="DTO\LopDTO.cs" />
     <Compile Include="DTO\vpctDTO.cs" />
     <Compile Include="GIAOVIEN.cs" />
     <Compile Include="HOCKY.cs" />

@@ -228,3 +228,5 @@ E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fHocLuc.resources
 E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fQuenMatKhau.resources
 E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fDanToc.resources
 E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fTonGiao.resources
+E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fKhoiLop.resources
+E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fLop.resources

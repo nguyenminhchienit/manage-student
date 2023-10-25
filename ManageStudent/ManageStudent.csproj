@@ -123,11 +123,23 @@
     <Compile Include="fHocSinh.Designer.cs">
       <DependentUpon>fHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="fKhoiLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhoiLop.Designer.cs">
+      <DependentUpon>fKhoiLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLop.Designer.cs">
+      <DependentUpon>fLop.cs</DependentUpon>
     </Compile>
     <Compile Include="fMain.cs">
       <SubType>Form</SubType>
@@ -236,8 +248,14 @@
     <EmbeddedResource Include="fHocSinh.resx">
       <DependentUpon>fHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fKhoiLop.resx">
+      <DependentUpon>fKhoiLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLop.resx">
+      <DependentUpon>fLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>

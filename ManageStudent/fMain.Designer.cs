@@ -293,6 +293,7 @@ namespace ManageStudent
             this.mnLop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnLop.ImageOptions.Image")));
             this.mnLop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnLop.ImageOptions.LargeImage")));
             this.mnLop.Name = "mnLop";
+            this.mnLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnLop_ItemClick);
             // 
             // mnKhoa
             // 
@@ -301,6 +302,7 @@ namespace ManageStudent
             this.mnKhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mnKhoa.ImageOptions.Image")));
             this.mnKhoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mnKhoa.ImageOptions.LargeImage")));
             this.mnKhoa.Name = "mnKhoa";
+            this.mnKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnKhoa_ItemClick);
             // 
             // mnQLDiem
             // 

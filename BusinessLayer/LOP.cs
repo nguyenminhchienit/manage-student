@@ -1,4 +1,5 @@
-﻿using DataAccessLayer;
+﻿using BusinessLayer.DTO;
+using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,29 @@ namespace BusinessLayer
         public List<tb_Lop> getList(int makhoi)
         {
             return db.tb_Lop.Where(x => x.MAKHOI == makhoi).ToList();
+        }
+
+        public List<LopDTO> getListFull()
+        {
+            var list = db.tb_Lop.ToList();
+            List<LopDTO> l = new List<LopDTO>();
+            LopDTO lDTO;
+            foreach (var item in list)
+            {
+                lDTO = new LopDTO();
+                lDTO.MALOP = item.MALOP;
+                lDTO.TENLOP = item.TENLOP;
+                
+
+                lDTO.MAKHOI = item.MAKHOI;
+                var mk = db.tb_KhoiLop.FirstOrDefault(t => t.MAKHOI == item.MAKHOI);
+                lDTO.TENKHOI = mk.TENKHOI;
+
+                lDTO.GHICHU = item.GHICHU;
+
+                l.Add(lDTO);
+            }
+            return l;
         }
 
         public tb_Lop Add(tb_Lop hk)
