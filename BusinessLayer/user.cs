@@ -22,6 +22,18 @@ namespace BusinessLayer
             
         }
 
+        public tb_User getItemByID(int id)
+        {
+            return db.tb_User.FirstOrDefault(x => x.UID == id);
+
+        }
+
+        public List<tb_User> getList()
+        {
+            return db.tb_User.ToList();
+
+        }
+
         public tb_User getItemByEmail(string email)
         {
             return db.tb_User.FirstOrDefault(x => x.EMAIL == email);
@@ -66,6 +78,25 @@ namespace BusinessLayer
                 }
                 db.SaveChanges();
                 return u;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error + ", ex);
+            }
+        }
+
+        public bool Delete(int id, int uid)
+        {
+            try
+            {
+                if(id == uid)
+                {
+                    return false;
+                }
+                var _u = db.tb_User.FirstOrDefault(x => x.UID == id);
+                db.tb_User.Remove(_u);
+                db.SaveChanges();
+                return true;
             }
             catch (Exception ex)
             {

@@ -195,6 +195,12 @@
     <Compile Include="fQuenMatKhau.Designer.cs">
       <DependentUpon>fQuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaiKhoan.Designer.cs">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThongKeViPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fQuenMatKhau.resx">
       <DependentUpon>fQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTaiKhoan.resx">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThongKeViPham.resx">
       <DependentUpon>fThongKeViPham.cs</DependentUpon>

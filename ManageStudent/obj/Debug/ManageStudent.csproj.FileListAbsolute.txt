@@ -231,3 +231,4 @@ E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fTonGiao.resources
 E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fKhoiLop.resources
 E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fLop.resources
 E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.Report.Diem_report.resources
+E:\HUTECH\Nam3\HK1\ManageStudent\obj\Debug\ManageStudent.fTaiKhoan.resources

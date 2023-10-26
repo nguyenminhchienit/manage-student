@@ -211,5 +211,10 @@ namespace ManageStudent
         {
             openForm(typeof(fLop));
         }
+
+        private void btnTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(fTaiKhoan));
+        }
     }
 }

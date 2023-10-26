@@ -67,8 +67,10 @@ namespace ManageStudent
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnXemDiem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.ribonHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribonTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribonChucNang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribonDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -128,10 +130,11 @@ namespace ManageStudent
             this.barButtonItem1,
             this.barButtonItem2,
             this.btnXemDiem,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.btnTaiKhoan});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(40);
-            this.ribbon.MaxItemId = 39;
+            this.ribbon.MaxItemId = 40;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribonHeThong,
@@ -430,10 +433,19 @@ namespace ManageStudent
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.Caption = "Tài Khoản";
+            this.btnTaiKhoan.Id = 39;
+            this.btnTaiKhoan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTaiKhoan.ImageOptions.SvgImage")));
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaiKhoan_ItemClick);
+            // 
             // ribonHeThong
             // 
             this.ribonHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribonTaiKhoan});
             this.ribonHeThong.Name = "ribonHeThong";
             this.ribonHeThong.Text = "Hệ thống";
             // 
@@ -447,6 +459,12 @@ namespace ManageStudent
             this.ribbonPageGroup1.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Hệ thống";
+            // 
+            // ribonTaiKhoan
+            // 
+            this.ribonTaiKhoan.ItemLinks.Add(this.btnTaiKhoan);
+            this.ribonTaiKhoan.Name = "ribonTaiKhoan";
+            this.ribonTaiKhoan.Text = "Quản Lý Tài Khoản";
             // 
             // ribonChucNang
             // 
@@ -623,5 +641,7 @@ namespace ManageStudent
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btnXemDiem;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnTaiKhoan;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribonTaiKhoan;
     }
 }

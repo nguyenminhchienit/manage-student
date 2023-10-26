@@ -27,6 +27,7 @@ namespace ManageStudent
              tb_User _user = new tb_User();
             _user.USERNAME = txtUsername.Text;
             _user.PASSWORD = txtPassword.Text;
+            _user.FULLNAME = "";
             _user.ROLE = cbRole.Text;
             _user.EMAIL = txtGmail.Text;
             u.Add(_user);
