@@ -9,15 +9,15 @@
         <EntityTypeShape EntityType="HSModel.tb_ChucVu" Width="1.5" PointX="0.75" PointY="8.75" />
         <EntityTypeShape EntityType="HSModel.tb_DanhMucLoi" Width="1.5" PointX="6" PointY="9.25" />
         <EntityTypeShape EntityType="HSModel.tb_DanToc" Width="1.5" PointX="8.75" PointY="7.75" />
-        <EntityTypeShape EntityType="HSModel.tb_GiaoVien" Width="1.5" PointX="3.75" PointY="10.5" />
+        <EntityTypeShape EntityType="HSModel.tb_GiaoVien" Width="1.5" PointX="3.75" PointY="12.625" />
         <EntityTypeShape EntityType="HSModel.tb_GiaoVien_Lop" Width="1.5" PointX="6" PointY="3.875" />
-        <EntityTypeShape EntityType="HSModel.tb_HocKy" Width="1.5" PointX="3.75" PointY="15.625" />
+        <EntityTypeShape EntityType="HSModel.tb_HocKy" Width="1.5" PointX="0.75" PointY="3.5" />
         <EntityTypeShape EntityType="HSModel.tb_HocSinh" Width="1.5" PointX="6" PointY="13.375" />
         <EntityTypeShape EntityType="HSModel.tb_HS_Lop_NamHoc" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="HSModel.tb_KhoiLop" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HSModel.tb_Lop" Width="1.5" PointX="3.75" PointY="19.75" />
+        <EntityTypeShape EntityType="HSModel.tb_Lop" Width="1.5" PointX="3.75" PointY="17.875" />
         <EntityTypeShape EntityType="HSModel.tb_MonHoc" Width="1.5" PointX="10.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HSModel.tb_NamHoc" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HSModel.tb_NamHoc" Width="1.5" PointX="3.75" PointY="8.875" />
         <EntityTypeShape EntityType="HSModel.tb_TonGiao" Width="1.5" PointX="10.75" PointY="4.75" />
         <EntityTypeShape EntityType="HSModel.tb_TrinhDo" Width="1.5" PointX="10.75" PointY="8.75" />
         <EntityTypeShape EntityType="HSModel.tb_Truong" Width="1.5" PointX="12.75" PointY="0.75" />

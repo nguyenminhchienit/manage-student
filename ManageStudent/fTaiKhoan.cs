@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -104,7 +105,26 @@ namespace ManageStudent
             this.Close();
         }
 
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
 
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2")); // Chuyển đổi byte thành dạng chuỗi hex
+                }
+                return builder.ToString();
+            }
+        }
+
+        public static bool VerifyPassword(string enteredPassword, string storedHashedPassword)
+        {
+            string hashedEnteredPassword = HashPassword(enteredPassword);
+            return string.Equals(hashedEnteredPassword, storedHashedPassword, StringComparison.OrdinalIgnoreCase);
+        }
         void saveData()
         {
             
@@ -115,10 +135,17 @@ namespace ManageStudent
                     MessageBox.Show("Bạn chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
+                if (_u.getUser(txtUserName.Text))
+                {
+                    MessageBox.Show("Username đã tồn tại, vui lòng chọn tên khác", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 tb_User _user = new tb_User();
                 _user.USERNAME = txtUserName.Text;
                 _user.FULLNAME = txtFullName.Text;
-                _user.PASSWORD = txtPassword.Text;
+                //_user.PASSWORD = txtPassword.Text;
+                string hashPassword = HashPassword(txtPassword.Text);
+                _user.PASSWORD = hashPassword;
                 _user.ROLE = cbRole.Text;
                 _user.EMAIL = txtEmail.Text;
                 _u.Add(_user);

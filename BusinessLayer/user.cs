@@ -22,6 +22,16 @@ namespace BusinessLayer
             
         }
 
+        public bool getUser(string username)
+        {
+            var u = db.tb_User.FirstOrDefault(x => x.USERNAME == username);
+            if (u != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public tb_User getItemByID(int id)
         {
             return db.tb_User.FirstOrDefault(x => x.UID == id);

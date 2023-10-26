@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,23 +63,35 @@ namespace ManageStudent
             }
         }
 
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2")); // Chuyển đổi byte thành dạng chuỗi hex
+                }
+                return builder.ToString();
+            }
+        }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             if (otp.ToString().Equals(txtOTP.Text))
             {
                 string email = txtEmail.Text;
                 string password = txtMK.Text;
-                //string hashPassword = HashPassword(password);
+                string hashPassword = HashPassword(password);
                 string rePassword = txtReMK.Text;
                 if (password.Equals(rePassword))
                 {
-                    if (ForgotAccount(email, password))
+                    if (ForgotAccount(email, hashPassword))
                     {
                         MessageBox.Show("Đổi mật khẩu thành công");
                         this.Hide();
-
-                        //fLogin f = new fLogin();
-                        //f.ShowDialog();
                     }
                 }
                 else

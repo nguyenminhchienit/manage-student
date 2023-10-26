@@ -44,6 +44,7 @@ namespace ManageStudent
             ribbonPageGroup6.Visible = false;
             ribbonPageGroup7.Visible = false;
             ribbonPageGroup8.Visible = false;
+            ribonTaiKhoan.Visible = false;
 
             Commons.handle =  ShowProgressPanel(this, options);
             fLogin login = new fLogin();
@@ -133,6 +134,7 @@ namespace ManageStudent
                     ribbonPageGroup6.Visible = true;
                     ribbonPageGroup7.Visible = true;
                     ribbonPageGroup8.Visible = true;
+                    ribonTaiKhoan.Visible = true;
                 }
                 else if(Commons.UserStatic.ROLE == "Giáo Viên")
                 {

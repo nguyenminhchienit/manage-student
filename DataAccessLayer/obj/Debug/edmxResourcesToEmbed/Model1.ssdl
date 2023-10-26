@@ -239,7 +239,7 @@
     </Key>
     <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
-    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="500" />
     <Property Name="FULLNAME" Type="nvarchar" MaxLength="50" />
     <Property Name="MATRUONG" Type="int" />
     <Property Name="MALOP" Type="int" />
